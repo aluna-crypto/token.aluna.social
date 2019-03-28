@@ -4,9 +4,9 @@ require('chai').should();
 
 contract('Token', accounts => {
 
-  const _name = "TestToken";
-  const _symbol = "TTA";
-  const _decimals = 18;
+  const _name = "Aluna TestToken";
+  const _symbol = "ATT";
+  const _decimals = 0;
 
   beforeEach(async function () {
     this.token = await Token.new();
