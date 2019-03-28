@@ -4,7 +4,11 @@
 - ask some ETH on ropsten using [this faucet](https://faucet.ropsten.be/)
 - npm install
 
-## 2. current deployed on Ropsten testnet
+## 2. TODO
+
+- verify code on etherscan as [described here](https://blog.fundrequest.io/verifying-your-truffle-solidity-contracts-on-etherscan-87cb374e2adc)
+
+## 3. current deployed on Ropsten testnet
 
 ````bash
 $ make deploy.ropsten
