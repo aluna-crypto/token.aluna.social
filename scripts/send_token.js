@@ -40,10 +40,10 @@ send_token = async (address, amount, network = "ropsten") => {
 
   result = await token.transfer(address, amount)
 
-  console.log(" result ->", result)
+  console.log("receipt: ", result.receipt)
 }
 
-address = process.argv[2] || "0xD71FfA99Cfc24872364813EC5de6cF60ec2f0C84"
+address = process.argv[2] || "0xA8950F8C30595bE20A279b4F2ca54d140128AB1D"
 amount  = process.argv[3] || 10
 network = process.argv[4]
 

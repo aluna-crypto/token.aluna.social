@@ -1,5 +1,11 @@
+.PHONY: test
+
 setup:
 	npm install -g truffle
+	npm install
+
+test:
+	truffle test
 
 deploy.ropsten:
 	truffle migrate --network ropsten
