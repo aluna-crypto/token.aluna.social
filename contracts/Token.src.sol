@@ -6,8 +6,8 @@ contract Token is ERC20 {
 
   string public name = "Aluna TestToken";
   string public symbol = "ATT";
-  uint8 public decimals = 0;
-  uint public INITIAL_SUPPLY = 100000000; // 100 000 000 - 100 million tokens
+  uint8 public decimals = 0; // leaving without decimals for now
+  uint public INITIAL_SUPPLY = 100000000 * (10 ** uint256(decimals)); // 100 000 000 - 100 million tokens
 
   constructor() public {
     _mint(msg.sender, INITIAL_SUPPLY);
