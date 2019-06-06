@@ -1,0 +1,176 @@
+$img: "../assets/images/";
+
+$r_mobile: 320;
+$r_tablet: 768;
+$r_desktop: 1024;
+
+$background: #000;
+$color_light: #fff;
+$color_grey: #626262;
+$color_gold: #FAFF00;
+
+@import "fonts";
+@import "mixins";
+
+	@import "elements/circle-link";
+	@import "elements/odometer";
+
+@import "structure";
+@import "header";
+
+	@import "blocks/hero";
+	@import "blocks/next-gen";
+	@import "blocks/features";
+	@import "blocks/points";
+	@import "blocks/roadmap";
+	@import "blocks/icon-set";
+	@import "blocks/newsletter-signup";
+	@import "blocks/team";
+
+	@import "blocks/video-title";
+	@import "blocks/screenshot";
+	
+	@import "blocks/text-hero";
+	@import "blocks/reputation";
+	@import "blocks/text-image";
+
+	@import "blocks/text-image-hero";
+	@import "blocks/countdown";
+	@import "blocks/info-block";
+	@import "blocks/token-sale-table";
+	@import "blocks/info-band";
+	@import "blocks/acquisition";
+	@import "blocks/text-points";
+
+	@import "blocks/faq";
+
+	@import "blocks/legal";
+
+@import "footer";
+
+
+@import "animations/orbit";
+@import "animations/chart";
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000;
+	
+	//live bg
+	&.home {
+		@include respond-min($r_desktop) {
+			background-image: url('#{$img}bg-wave.png');
+			background-size: 1440px auto;
+			background-position: 50% -17px;
+			background-repeat: no-repeat;
+		}
+	}
+
+
+	// //debug
+	// background-image: url('#{$img}_iphone.png');
+	// background-position: 50% 0;
+	// height: 9087px;
+	// background-repeat: no-repeat;
+
+	// @include respond-min($r_desktop) {
+	// 	background-image: url('#{$img}bg-wave.png'), url('#{$img}_desktop.png');
+	// 	background-size: 1440px auto, 1412px auto;
+	// 	background-position: 50% -17px, 50% 0;
+	// }
+	// //debug
+
+
+
+	// //debug p2
+	// // background-image: url('#{$img}_iphone.png');
+	// background-position: 50% 0;
+	// height: 9087px;
+	// background-repeat: no-repeat;
+
+	// @include respond-min($r_desktop) {
+	// 	background-image:  url('#{$img}_desktop2.png');
+	// 	background-size:  1412px auto;
+	// 	background-position:  50% 86px;
+	// }
+	// //debug
+
+
+
+	// //debug p4
+	// // background-image: url('#{$img}_iphone.png');
+	// background-position: 50% 0;
+	// height: 9087px;
+	// background-repeat: no-repeat;
+
+	// @include respond-min($r_desktop) {
+	// 	background-image:  url('#{$img}_desktop4.png');
+	// 	background-size:  1412px auto;
+	// 	background-position:  50% 0;
+	// }
+	// //debug
+
+
+	// //debug p5
+	// // background-image: url('#{$img}_iphone.png');
+	// background-position: 50% 0;
+	// height: 9087px;
+	// background-repeat: no-repeat;
+
+	// @include respond-min($r_desktop) {
+	// 	background-image:  url('#{$img}_desktop5.png');
+	// 	background-size:  1412px auto;
+	// 	background-position:  50% 0;
+	// }
+	// //debug
+
+
+	// //debug p6
+	// // background-image: url('#{$img}_iphone.png');
+	// background-position: 50% 0;
+	// height: 9087px;
+	// background-repeat: no-repeat;
+
+	// @include respond-min($r_desktop) {
+	// 	background-image:  url('#{$img}_desktop6.png');
+	// 	background-size:  1412px auto;
+	// 	background-position:  50% 0;
+	// }
+	// //debug
+
+
+
+	* {
+		font-family: 'Maison Neue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		box-sizing: border-box;
+	}
+}
+
+
+::selection {
+  background: #bbb; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #333; /* Gecko Browsers */
+}
+
+input {
+	outline: none;
+}
+
+// .title {
+// 	background-color: rgba(255,0,0,0.5);
+// }
+
+// .main-img {
+// 	width: 100%;
+// }
+
+// .main-img img {
+// 	width: 100%;
+// }

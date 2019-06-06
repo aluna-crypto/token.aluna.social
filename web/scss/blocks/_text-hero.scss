@@ -1,0 +1,72 @@
+.row.row--text-hero {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	// height: 590px;
+	// overflow: hidden;
+	border-bottom: 1px solid $color_grey;
+	padding-bottom: 50px;
+	@include respond-min($r_desktop) {
+		padding-bottom: 98px;
+	}
+
+	// margin-bottom: 50px;
+
+	
+	h2 {
+		color: $color_light;
+	    display: block;
+	    text-align: center;
+	    font-family: 'gnuolaneregular', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	    font-size: 50px;
+	    letter-spacing: 9px;
+	    margin-bottom: 8px;
+	    // text-transform: uppercase;
+
+	    span {
+	    	display: none;
+	    }
+
+    	@include respond-min($r_tablet) {
+
+    		span {
+    			display: inline;
+    		}
+    		br {
+    			display: none;
+    		}
+			
+		}
+
+		@include respond-min($r_desktop) {
+			margin-top: 106px;
+			font-size: 90px;
+			letter-spacing: 11px;
+			font-weight: 100;
+		}
+
+	}	
+
+	p {
+		margin-top: 50px;
+		color: $color_light;
+		font-size: 20px;
+		line-height: 34px;
+		text-align: center;
+		font-weight: 100;
+
+		br {
+			display: none;
+		}
+
+		@include respond-min($r_desktop) {
+			// background-color: rgba(255,0,0,0.5);
+			font-size: 28px;
+			margin-top: 42px;
+			line-height: 50px;
+
+			br {
+				display: inline;
+			}
+		}
+	}
+}

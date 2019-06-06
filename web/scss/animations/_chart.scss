@@ -1,0 +1,166 @@
+#wp-four {
+	// background-color: red;
+	position: relative;
+
+	@include vp(transform, scale(0.45, 0.45));
+	@include vp(transform-origin, 0 0 );
+
+	@include respond-min($r_tablet) {
+		@include vp(transform, none);		
+	}
+
+
+	.chart {
+		background-image: url('#{$img}anim-2/chart.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+		width: 319px;
+		height: 330px;
+		left: 85px;
+		top: 22px;
+		position: absolute;
+		@include vp(transform, scale(0.001, 0.001));
+	}
+
+	.middle {
+		background-image: url('#{$img}anim-2/middle.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+		width: 115px;
+		left: 185px;
+		top: 172px;
+		height: 50px;
+		position: absolute;
+		@include vp(transform, scale(0.001, 0.001));
+		// background-color: rgba(0,0,255,0.5);
+	}
+
+	.tl {
+		background-image: url('#{$img}anim-2/tl.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+		width: 172px;
+		left: 1px;
+		top: -1px;
+		height: 89px;
+		position: absolute;
+		opacity: 0;
+		// background-color: rgba(0,0,255,0.5);
+	}
+
+	.tr {
+		background-image: url('#{$img}anim-2/tr.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+		width: 287px;
+		left: 331px;
+		top: -1px;
+		height: 61px;
+		position: absolute;
+		opacity: 0;
+		// background-color: rgba(0,0,255,0.5);
+	}
+
+	.right {
+		background-image: url('#{$img}anim-2/right.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+	    width: 282px;
+	    left: 327px;
+	    top: 89px;
+	    height: 132px;
+	    position: absolute;
+	    opacity: 0;
+		// background-color: rgba(0,0,255,0.5);
+	}
+	.br {
+		background-image: url('#{$img}anim-2/br.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+	    width: 240px;
+	    left: 307px;
+	    top: 284px;
+	    height: 98px;
+	    position: absolute;
+	    opacity: 0;
+		// background-color: rgba(0,0,255,0.5);
+	}
+	.bl {
+		background-image: url('#{$img}anim-2/bl.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;		
+	    width: 170px;
+	    left: 1px;
+	    top: 284px;
+	    height: 95px;
+	    position: absolute;
+	    opacity: 0;
+		// background-color: rgba(0,0,255,0.5);
+	}
+
+
+	&.triggered {
+		.chart {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+		.middle {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 0.4s 3s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+
+		.tl {
+			opacity: 1;
+			@include vp(transition, opacity 1.2s 1s);
+		}
+
+		.tr {
+			opacity: 1;
+			@include vp(transition, opacity 1.2s 1.2s);
+		}
+
+		.bl {
+			opacity: 1;
+			@include vp(transition, opacity 1.2s 1.4s);
+		}
+
+		.br {
+			opacity: 1;
+			@include vp(transition, opacity 1.2s 1.6s);
+		}
+
+		.right {
+			opacity: 1;
+			@include vp(transition, opacity 1.2s 2s);
+		}
+
+		// .ring-1 {
+		// 	@include vp(transform, scale(1, 1));
+		// 	@include vp(transition, all 1.5s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		// }
+
+		// .ring-2 {
+		// 	@include vp(transform, scale(1, 1));
+		// 	@include vp(transition, all 1.5s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		// }
+
+		// .ring-3 {
+		// 	@include vp(transform, scale(1, 1));
+		// 	@include vp(transition, all 1.5s 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		// }
+
+		// .orbit {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 3s 4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+		// }
+
+	}
+}

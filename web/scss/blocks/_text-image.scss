@@ -1,0 +1,149 @@
+.row.row--text-image {
+	padding-bottom: 50px;
+	border-bottom: 1px solid $color_grey;
+	// background-color: rgba(255,0,0,0.5);
+
+	
+
+	h2.row-title {
+		@include respond-min($r_desktop) {
+
+			margin-top: 160px;
+
+		}
+	}
+
+	.block {
+		// background-color: rgba(0,255,0,0.5);
+		margin-bottom: 110px;
+		@include respond-min($r_desktop) {
+			margin-bottom: 174px;
+		}
+
+		&.text-only {
+			@include respond-min($r_desktop) {
+				margin-bottom: 91px;
+			}
+			p {
+				@include respond-min($r_desktop) {
+					width: 100%;
+				}
+			}
+
+		}
+
+		h3 {
+			color: $color_light;
+   			font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   			letter-spacing: 5px;
+			@include respond-min($r_desktop) {
+				font-size: 34px;
+			}
+		}
+
+		p {
+			font-weight: 100;
+			color: $color_light;
+			font-size: 16px;
+			line-height: 30px;
+			margin-top: 30px;
+			// @include respond-min($r_tablet) {
+			// 	margin-left: 12px;
+			// }
+			@include respond-min($r_desktop) {
+				margin-top: 23px;
+				font-size: 22px;
+				margin-left: 0;
+				line-height: 38px;
+				width: 520px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+
+	.image {
+
+		@include respond-min($r_tablet) {
+			padding-top: 50px;
+		}
+
+		@include respond-min($r_desktop) {
+			display: inline-block;
+			vertical-align: top;
+			width: 350px;
+			margin-left: 106px;
+				// float: right;
+
+		}
+
+
+		img {
+			margin-top: 30px;
+			width: 100%;
+
+			@include respond-min($r_tablet) {
+				width: 80%;
+				display: block;;
+				margin: 0 auto;
+				@include respond-min($r_desktop) {
+					width: 100%;
+				}
+
+			}
+
+		}
+	}
+
+	.onward-link {
+		margin-left: 15px;
+		margin-top: 30px;
+	}
+
+	&.large-image {
+
+		.block {
+			margin-bottom: 70px;
+		}
+
+		.image {
+			height: 230px;
+			width: 610px;
+			margin-top: 50px;
+			@include respond-min($r_tablet) {
+				height: 430px;
+				margin-top: 30px;
+			}
+		}
+		@include respond-min($r_desktop) {
+			.block {
+				margin-bottom: 114px;
+
+				p {
+						width: 230px;
+						margin-top: 55px;
+				}
+			}
+
+			.image {
+				
+				// background-image: url('#{$img}image-token-allocation.png');
+				// background-size: 100% auto;
+				// background-position: 50% 0;
+				// background-repeat: no-repeat;
+				width: 610px;
+				float: right;
+				margin-left: 0;
+				margin-top: 25px;
+				// height: 430px;
+			}
+
+			.onward-link {
+				margin-top: 125px;
+				margin-left: 20px;
+			}
+		}
+
+	}
+}

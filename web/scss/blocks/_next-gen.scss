@@ -1,0 +1,120 @@
+.row.row--next-gen {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	height: 750px;
+	overflow: hidden;
+
+	@include respond-min($r_tablet) {
+		height: 900px;
+	}
+	@include respond-min($r_desktop) {
+		height: 736px;
+		position: relative;
+	}
+
+
+	// h2 {
+	// 	color: $color_light;
+	// 	font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	// 	margin-left: 12px;
+	// 	margin-top: 63px;
+	// 	font-size: 38px;
+	// 	letter-spacing: 7px;
+	// 	line-height: 48px;
+
+	// 	@include respond-min($r_desktop) {
+	// 		margin-top: 101px;
+	// 		font-size: 50px;
+	// 		margin-left: 1px;
+	// 		br {
+	// 			display: none;
+	// 		}
+	// 	}
+
+	// }
+
+	.video-box {
+		padding-top: 1px;
+		position: relative;
+
+		@include respond-min($r_desktop) {
+			margin-top: 28px;
+			width: 640px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		img {
+			width: 100%;	
+		}
+		.play {
+			background-image: url('#{$img}play-btn.png');
+			background-size: 100% auto;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			width: 76px;
+			height: 76px;
+			top: 50%;
+			left: 50%;
+			margin-left: -38px;
+			margin-top: -38px;
+			position: absolute;
+			z-index: 10;
+
+			@include vp(transition, all 0.4s);
+
+			@include respond-min($r_desktop) {
+				width: 106px;
+				height: 106px;
+				margin-left: -53px;
+				margin-top: -53px;
+			}
+
+
+			&:hover {
+				@include vp(transform, scale(1.1, 1.1));
+			}
+		}
+	}
+	
+	p {
+		color: $color_light;
+		font-size: 20px;
+		line-height: 34px;
+		margin-top: 48px;
+		@include respond-min($r_tablet) {
+			margin-left: 12px;
+		}
+		@include respond-min($r_desktop) {
+		    font-weight: 100;
+		    display: inline-block;
+		    vertical-align: top;
+		    margin-top: 51px;
+		    text-align: right;
+		    width: 295px;
+		    line-height: 47px;
+		    margin-left: 44px;
+		    font-size: 27px;
+		}
+
+	}
+
+	.learn-more {
+		margin-left: 19px;
+		margin-top: 40px;
+		@include respond-min($r_tablet) {
+			margin-left: 29px;
+		}
+		@include respond-min($r_desktop) {
+			position: absolute;
+			left: 50%;
+			margin-left: 313px;
+			top: 507px;
+			// display: inline-block;
+			// float: right;
+			// vertical-align: top;
+			// width: 100px;
+		}
+	}
+}

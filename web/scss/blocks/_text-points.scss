@@ -1,0 +1,96 @@
+.row.row--text-points {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	overflow: hidden;
+	padding-bottom: 70px;
+
+	// @include respond-min($r_tablet) {
+	// }
+	@include respond-min($r_desktop) {
+		position: relative;
+	}
+
+	h2.row-title {
+		// margin-left: 0;
+		margin-bottom: 0;
+
+		@include respond-min($r_desktop) {
+			margin-top: 145px;
+		}
+
+	}
+
+	p.row-body {
+		margin-top: 20px;
+		@include respond-min($r_desktop) {
+			width: 400px;
+			display: inline-block;
+			text-align: left;
+			margin-left: 0;
+			margin-top: 78px;
+			font-size: 22px;
+			line-height: 39px;
+
+		}
+
+	}
+
+	.animation {
+		display: none;
+	}
+
+	.points {
+		display: none;
+		@include respond-min($r_desktop) {
+			// background-color: rgba(255,0,0,0.5);
+			display: inline-block;
+			vertical-align: top;
+			width: 450px;
+			margin-top: 80px;
+			margin-left: 105px;
+		}
+
+		.point {
+			@include respond-min($r_desktop) {
+				background-image: url('#{$img}bullet-point.png');
+				background-size: 19px auto;
+				background-position: 2px 4px;
+				background-repeat: no-repeat;
+				margin-bottom: 24px;
+
+				color: $color_light;
+				font-weight: 100;
+				padding-left: 40px;
+				line-height: 26px;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				text-transform: uppercase;
+				font-size: 18px;
+				width: 290px;
+			}
+
+			&.no-bg {
+				font-family: 'Maison Neue',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-size: 22px;
+				background-image: none;
+				padding-left: 0;
+				margin-bottom: 38px;
+			}
+		}
+	}
+	
+	.learn-more {
+		margin-left: 15px;
+		margin-top: 29px;
+		@include respond-min($r_tablet) {
+			// margin-top: 10px;
+			margin-left: 28px;
+		}
+		@include respond-min($r_desktop) {
+			margin-top: -30px;
+		//     // position: absolute;
+		//     left: 50%;
+		//     margin-left: 57px;
+		//     top: 717px;
+		}
+	}
+}

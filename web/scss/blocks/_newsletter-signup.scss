@@ -1,0 +1,157 @@
+.row.row--news-signup {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+
+	display: none;
+
+	@include respond-min($r_desktop) {
+		margin-bottom: 100px;
+		background-image: url('#{$img}signup-banner.png');
+		background-size: auto 100%;
+		background-repeat: repeat-x;
+		background-position: 50% 50%;
+		// background-color: green;
+		height: 273px;
+		margin-top: 125px;
+		display: block;
+	}
+
+
+	.info {
+		display: inline-block;
+		width: 450px;
+		margin-left: 40px;
+		margin-top: 85px;
+
+
+		h3 {
+			font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			color: $color_light;
+			font-size: 38px;
+			letter-spacing: 6.5px;
+			font-weight: 400;
+			padding-top: 0;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		p {
+			color: $color_light;
+			font-size: 20px;
+			font-weight: 400;
+			margin-top: 10px;
+			padding-top: 0;
+		}
+	}
+
+	form {
+		border: 1px solid $color_light;
+		background-color: $background;
+		padding: 10px;
+		width: 430px;
+		height: 60px;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 92px;
+		margin-left: 26px;
+
+
+		input {
+			border: none;
+			height: 34px;
+			background-color: transparent;
+
+
+			&[type="text"] {
+				font-size: 26px;
+				padding-left: 8px;
+				padding-top: 7px;
+				color: $color_light;
+				width: 340px;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+			}
+			&[type="submit"] {
+				// background-color: transparent;
+				background-image: url('#{$img}text-arrow-right.png');
+				cursor: pointer;
+				background-size: 17px auto;
+				background-position: 70% 50%;
+				background-repeat: no-repeat;
+				text-indent: -9999em;
+				width: 60px;
+				padding-top: 10px;
+			}
+		}
+	}
+
+	// h2 {
+	// 	color: $color_light;
+	// 	margin-top: 120px;
+	// 	@include respond-min($r_tablet) {
+	// 		margin-top: 80px;
+	// 	}
+	// 	@include respond-min($r_desktop) {
+	// 		margin-top: 75px;
+	// 	}
+
+
+	// 	span {
+	// 		display: block;
+	// 		text-align: center;
+	// 		font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	// 		font-size: 50px;
+	// 		letter-spacing: 9px;
+	// 		padding-left: 10px;
+	// 		margin-bottom: 8px;
+	// 		text-transform: uppercase;
+
+	// 		@include respond-min($r_tablet) {
+	// 			font-size: 70px;
+	// 		}
+	// 		@include respond-min($r_desktop) {
+	// 			text-transform: none;
+	// 			text-align: left;
+	// 			margin-bottom: 0;
+	// 			line-height: 68px;
+	// 		}
+	// 	}
+	// }
+
+	// h3 {
+	// 	color: $color_light;
+	// 	text-align: center;
+	// 	font-size: 20px;
+	// 	margin-top: 22px;
+
+	// 	@include respond-min($r_tablet) {
+	// 		font-size: 22px;
+	// 	}
+
+	// 	@include respond-min($r_desktop) {
+	// 		text-align: left;
+	// 		margin-top: 53px;
+	// 		margin-left: 4px;
+	// 		font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	// 	}
+
+	
+
+	// }
+
+	// .get-started {
+	// 	margin-top: 125px;
+	// 	margin-left: 40px;
+
+
+	// 	@include respond-min($r_tablet) {
+	// 		margin-top: 93px;
+	// 		margin-left: 190px;
+	// 	}
+
+	// 	@include respond-min($r_desktop) {
+	// 		margin-top: 103px;
+	// 		margin-left: 25px;
+	// 	}
+	// }
+}

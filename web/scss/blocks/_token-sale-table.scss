@@ -1,0 +1,214 @@
+.row.row--token-sale-table {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	overflow: hidden;
+	padding-top: 60px;
+	padding-bottom: 70px;
+	// border-top: 1px solid $color_grey;
+	// border-bottom: 1px solid $color_grey;
+
+	@include respond-min($r_desktop) {
+		position: relative;
+		padding-bottom: 140px;
+	}
+	
+
+	h2.row-title {
+		@include respond-min($r_desktop) {
+			margin-top: 38px;
+			margin-bottom: 20px;
+		}
+
+	}
+
+	p.row-body {
+		// color:
+		@include respond-min($r_desktop) {
+			text-align: left;
+			margin-left: 0;
+			font-size: 22px;
+			margin-top: 5px;
+			width: 520px;
+			line-height: 40px;
+		}
+		br {
+			display: none;
+		}
+	}
+
+	.table-mobile {
+		color: $color_light;
+		text-align: center;
+		@include respond-min($r_tablet) {
+			font-size: 0;
+		}
+		@include respond-min($r_desktop) {
+			display: none;
+		}
+
+
+		h4 {
+   			font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-size: 30px;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			margin-bottom: 30px;
+		}
+
+		.box {
+			border: 1px solid $color_light;
+			border-bottom: none;
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			@include respond-min($r_tablet) {
+				font-weight: 0;
+				width: 50%;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 0;
+			}
+
+			
+			&--first, &--third {
+				@include respond-min($r_tablet) {
+					border-right: none;
+				}
+
+			}
+
+			&--third {
+				@include respond-min($r_tablet) {
+					border-bottom: 1px solid $color_light;
+				}
+			}
+			&--last {
+				border-bottom: 1px solid $color_light;
+			}
+
+			.label {
+				font-size: 18px;
+				margin-bottom: 15px;
+			}
+
+			.value {
+				font-weight: 100;
+				font-size: 14px;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			}
+		}
+	}
+
+	.table-desktop {
+		display: none;
+		@include respond-min($r_desktop) {
+			display: block;
+			font-size: 0;
+
+			margin-top: 10px;
+
+
+			.tab-row {
+
+				&--head {
+
+					.box {
+						padding-top: 46px;
+						font-size: 26px;
+						font-weight: 100;
+					}
+				}
+
+				&--phase1 {
+					.box {
+						&--phase {
+							padding-top: 26px;
+							font-size: 32px;
+						}
+
+						&--amount, &--price, &--lockup, &--cap {
+							font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+							padding-top: 35px;
+							font-size: 18px;
+
+							border-left: 1px solid $color_grey;
+							border-top: 1px solid $color_grey;
+							border-bottom: 1px dashed $color_grey;
+						}
+
+						&--cap {
+							border-right: 1px solid $color_grey;
+						}
+
+					}
+				}
+
+				&--phase2 {
+					.box {
+						&--phase {
+							padding-top: 26px;
+							font-size: 32px;
+						}
+						&--amount, &--price, &--lockup, &--cap {
+							font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+							padding-top: 35px;
+							font-size: 18px;
+
+							border-left: 1px solid $color_grey;
+							// border-top: 1px solid $color_grey;
+							border-bottom: 1px solid $color_grey;
+						}
+
+						&--cap {
+							border-right: 1px solid $color_grey;
+						}
+
+					}
+				}
+
+				.box {
+					display: inline-block;
+					vertical-align: top;
+					text-align: center;
+					color: $color_light;
+					// padding-top: 10px;
+					padding-bottom: 10px;
+					height: 90px;
+
+					&--phase {
+						width: 190px;
+						text-align: left;
+
+					}
+					&--amount {
+						width: 230px;
+
+					}
+					&--price {
+						width: 230px;
+
+					}
+					&--lockup {
+						width: 130px;
+
+					}
+					&--cap {
+						width: 200px;
+
+					}
+				}
+			}
+		}
+	}
+
+	.onward-link {
+		margin-left: 15px;
+		margin-top: 30px;
+		@include respond-min($r_tablet) {
+			margin-top: 50px;
+		}
+		@include respond-min($r_desktop) {
+			margin-top: 105px;
+		}
+	}
+}

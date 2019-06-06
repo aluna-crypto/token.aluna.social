@@ -1,0 +1,148 @@
+.row.row--footer {
+	background-color: $color_light;
+	// background-color: rgba(255,255,255,0.5);
+	position: relative;
+
+	.footer-emblem {
+		background-image: url('#{$img}footer-emblem.png');
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		position: absolute;
+		left: 50%;
+		top: -40px;
+		width: 80px;
+		height: 80px;
+		margin-left: -40px;
+
+		@include respond-min($r_desktop) {
+			width: 116px;
+			height: 116px;
+			margin-left: -58px;
+			top: -58px;
+		}
+
+	}
+
+	.footer-logo {
+		background-image: url('#{$img}footer-logo.png');
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		width: 166px;
+		height: 30px;
+
+		position: absolute;
+
+		top: 53px;
+		left: 50%;
+		margin-left: -83px;
+
+
+		@include respond-min($r_desktop) {
+			top: 96px;
+			width: 230px;
+			margin-left: -115px;
+		}
+
+	}
+
+
+	.footer-links {
+		display: none;
+		@include respond-min($r_desktop) {
+			display: block;
+			text-align: center;
+			padding-top: 180px;
+
+			a {
+				display: inline-block;
+				// background-color: rgba(255,0,0,0.5);
+				text-decoration: none;
+				color: $background;
+				margin-left: 31px;
+				margin-right: 31px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.social-icons {
+		height: 48px;
+		// margin-left: -10px;
+		position: relative;
+		margin-top: 0;
+		padding-top: 105px;
+		width: 100%;
+		text-align: center;
+
+		@include respond-min($r_desktop) {
+			padding-top: 40px;
+		}
+
+		.icon {
+			display: inline-block;
+			background-size: 17px auto;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			height: 32px;
+			text-indent: -9999em;
+			margin-right: 2px;
+			margin-left: 2px;
+			width: 32px;
+
+			@include respond-min($r_desktop) {
+				background-size: 20px auto;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+
+
+			&--twitter {
+				background-image: url('#{$img}social-dark-twitter.png');
+			}
+			&--linkedin {
+				background-image: url('#{$img}social-dark-linkedin.png');
+			}
+			&--medium {
+				background-image: url('#{$img}social-dark-medium.png');
+			}
+			&--bitcoin {
+				background-image: url('#{$img}social-dark-bitcoin.png');
+			}
+			&--telegram {
+				background-image: url('#{$img}social-dark-telegram.png');
+			}
+			&--youtube {
+				background-image: url('#{$img}social-dark-youtube.png');
+			}
+			&--github {
+				background-image: url('#{$img}social-dark-github.png');
+			}
+			&--mail {
+				background-image: url('#{$img}social-dark-mail.png');
+			}
+
+			&:hover {
+				@include vp(transform, scale(1.2, 1.2));
+				@include vp(transition, all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			}
+		}
+	}
+
+	.copyright {
+		margin-top: 48px;
+		font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 10px;
+		text-align: center;
+		padding-bottom: 25px;
+
+		@include respond-min($r_desktop) {
+			margin-top: 55px;
+		}
+
+	}
+}

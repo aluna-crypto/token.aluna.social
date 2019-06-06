@@ -1,0 +1,151 @@
+.row.row--team {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	// height: 750px;
+	padding-bottom: 51px;
+	overflow: hidden;
+
+	@include respond-min($r_tablet) {
+		// height: 900px;
+	}
+	@include respond-min($r_desktop) {
+		padding-bottom: 158px;
+	}
+
+	h2.row-title {
+		@include respond-min($r_desktop) {
+			margin-top: 0;
+		}
+
+	}
+
+
+	.team-members {
+		margin-top: 128px;
+		font-size: 0;
+		@include respond-min($r_tablet) {
+			text-align: center;
+		}
+		@include respond-min($r_desktop) {
+			margin-top: 95px;
+		}
+
+		.member {
+			margin-bottom: 92px;
+
+			@include respond-min($r_tablet) {
+				
+				// background-color: rgba(0,0,255,0.5);
+				width: 300px;
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			@include respond-min($r_desktop) {
+				width: 326px;
+			}
+
+
+
+			&:last-child {
+				// margin-bottom: 0;
+			}
+
+			.portrait {
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+				margin: 0 auto;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+				}
+
+				@include respond-min($r_desktop) {
+					width: 200px;
+					height: 200px;
+				}
+
+			}
+
+			.name {
+				text-align: center;
+				margin-top: 24px;
+				font-size: 32px;
+				color: $color_light;
+
+				@include respond-min($r_tablet) {
+					font-size: 26px;
+				}
+				@include respond-min($r_desktop) {
+					font-size: 28px;
+					margin-top: 30px;
+				}
+
+			}
+
+			.title {
+				text-align: center;
+				color: $color_light;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				margin-top: 8px;
+				font-size: 17px;
+				@include respond-min($r_tablet) {
+					font-size: 15px;
+				}
+				@include respond-min($r_desktop) {
+					margin-top: 13px;
+				}
+			}
+
+			.links {
+				margin-top: 13px;
+				height: 48px;
+				width: 100%;
+				text-align: center;
+				
+				.link {
+					// background-color: rgba(255,0,0,0.5);
+					display: inline-block;
+					background-size: 16px auto;
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					height: 48px;
+					text-indent: -9999em;
+					margin-right: 0px;
+					width: 48px;
+
+					&--twitter {
+						background-image: url('#{$img}social-twitter.png');
+					}
+					&--linkedin {
+						background-image: url('#{$img}social-linkedin.png');
+					}
+					&--medium {
+						background-image: url('#{$img}social-medium.png');
+					}
+					&--bitcoin {
+						background-image: url('#{$img}social-bitcoin.png');
+					}
+					&--telegram {
+						background-image: url('#{$img}social-telegram.png');
+					}
+					&--youtube {
+						background-image: url('#{$img}social-youtube.png');
+					}
+					&--github {
+						background-image: url('#{$img}social-github.png');
+					}
+
+
+					&:hover {
+						@include vp(transform, scale(1.2, 1.2));
+						@include vp(transition, all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+					}
+				}
+			}
+		}
+
+	}
+}

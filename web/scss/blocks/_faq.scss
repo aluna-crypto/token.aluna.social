@@ -1,0 +1,92 @@
+.row.row--faq {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	// height: 590px;
+	// overflow: hidden;
+	// border-bottom: 1px solid $color_grey;
+	// padding-bottom: 50px;
+
+	@include respond-min($r_desktop) {
+		// padding-bottom: 50px;
+	}
+
+	.faq-links {
+		text-align: center;
+
+		a {
+			display: inline-block;
+			color: $color_light;
+			font-weight: 100;
+			margin: 10px 10px 5px 10px;
+			padding-bottom: 5px;
+			text-decoration: none;
+			
+			@include respond-min($r_tablet) {
+				font-size: 20px;
+			}
+			@include respond-min($r_desktop) {
+				font-size: 28px;
+				letter-spacing: 1px;
+				margin-left: 25px;
+				margin-right: 25px;
+			}
+
+
+			&.selected {
+				border-bottom: 1px dashed $color_gold;
+			}
+		}
+	}
+
+	.faq-items {
+		margin-top: 40px;
+		// padding: 20px;
+		@include respond-min($r_desktop) {
+			margin-top: 160px;
+			font-size: 0;
+			margin-left: -25px;
+			margin-right: -25px;
+		}
+
+
+		.item {
+			// background-color: rgba(255,0,0,0.5);
+			color: $color_light;
+			margin-bottom: 30px;
+			font-size: 16px;
+			@include respond-min($r_desktop) {
+				width: 45%;
+				display: inline-block;
+				vertical-align: top;
+				margin-bottom: 50px;
+
+				margin-left: 2.5%;
+				margin-right: 2.5%;
+				// &:nth-child(odd) {
+				// 	margin-right: 4%;
+				// }
+			}
+
+			.title {
+				font-weight: 900;
+				font-size: 20px;
+				line-height: 25px;
+				@include respond-min($r_desktop) {
+					font-size: 30px;
+					margin-bottom: 40px;
+					line-height: 35px;
+				}
+
+			}
+
+			p {
+				font-weight: 100;
+				line-height: 25px;
+				@include respond-min($r_desktop) {
+					font-size: 20px;
+					line-height: 38px;
+				}
+			}
+		}
+	}
+}

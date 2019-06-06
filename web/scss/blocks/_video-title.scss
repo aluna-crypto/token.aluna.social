@@ -1,0 +1,83 @@
+.row.row--video-title {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+
+	// height: 750px;
+	overflow: hidden;
+
+	// @include respond-min($r_tablet) {
+	// 	height: 900px;
+	// }
+	// @include respond-min($r_desktop) {
+	// 	height: 736px;
+	// 	position: relative;
+	// }
+
+
+	h2 {
+		color: $color_light;
+		font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		margin-left: 12px;
+		margin-top: 63px;
+		font-size: 38px;
+		letter-spacing: 7px;
+		line-height: 48px;
+
+		@include respond-min($r_desktop) {
+			display: inline-block;
+			// background-color: rgba(255,0 ,0,0.5);
+			font-size: 82px;
+			letter-spacing: 17px;
+			line-height: 114px;
+			margin-left: 1px;
+			margin-top: 56px;
+		}
+
+	}
+
+	.video-box {
+		padding-top: 1px;
+		position: relative;
+		margin-bottom: 50px;
+
+		@include respond-min($r_desktop) {
+			margin-top: 67px;
+			width: 517px;
+			margin-left: 56px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		img {
+			width: 100%;	
+		}
+		.play {
+			background-image: url('#{$img}play-btn.png');
+			background-size: 100% auto;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			width: 76px;
+			height: 76px;
+			top: 50%;
+			left: 50%;
+			margin-left: -38px;
+			margin-top: -38px;
+			position: absolute;
+			z-index: 10;
+			@include vp(transition, all 0.4s);
+
+			@include respond-min($r_desktop) {
+				width: 106px;
+				height: 106px;
+				margin-left: -53px;
+				margin-top: -53px;
+			}
+
+
+			&:hover {
+				@include vp(transform, scale(1.1, 1.1));
+			}
+		}
+	}
+
+}

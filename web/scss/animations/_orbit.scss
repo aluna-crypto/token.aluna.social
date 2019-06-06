@@ -1,0 +1,254 @@
+#wp-one {
+	// background-color: red;
+	position: relative;
+
+	@include vp(transform, scale(0.6, 0.6));
+
+	@include respond-min($r_tablet) {
+		@include vp(transform, none);		
+	}
+
+
+
+	.middle {
+		background-image: url('#{$img}anim-1/middle.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include vp(transform, scale(0.001, 0.001));
+
+		position: absolute;
+		width: 146px;
+		height: 146px;
+		left: 50%;
+		top: 50%;
+		margin-left: -74px;
+		margin-top: -60px;
+	}
+
+	.ring-1 {
+		background-image: url('#{$img}anim-1/ring-1.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include vp(transform, scale(0.001, 0.001));
+
+		position: absolute;
+		width: 188px;
+	    height: 188px;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -96px;
+	    margin-top: -80px;
+
+	}
+
+	.ring-2 {
+		background-image: url('#{$img}anim-1/ring-2.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include vp(transform, scale(0.001, 0.001));
+
+		position: absolute;
+		width: 238px;
+	    height: 238px;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -121px;
+	    margin-top: -104px;
+	}
+
+	.ring-3 {
+		background-image: url('#{$img}anim-1/ring-3.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include vp(transform, scale(0.001, 0.001));
+
+		position: absolute;
+		width: 290px;
+	    height: 290px;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -147px;
+	    margin-top: -130px;
+	}
+
+	.orbit {
+		// background-color: rgba(0,255,0,0.5);
+		width: 290px;
+		height: 290px;
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -147px;
+	    margin-top: -130px;
+		opacity: 0;
+	    // @include vp(animation, rotating 240s linear infinite);
+
+	    &.show {
+	    	opacity: 1;
+	    }
+
+
+	    .satelite {
+	    	width: 10px;
+	    	height: 10px;
+	    	position: absolute;
+	    	// background-color: rgba(0,0,255,0.5);
+
+		    // @include vp(animation, rotatingReverse 240s linear infinite);
+			
+			.inner {
+				position: absolute;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+			}
+			&--spend {
+		    	top: 102px;
+		    	left: 28px;	
+				.inner {
+					background-image: url('#{$img}anim-1/spend.png');
+					// left: 0;
+					bottom: -7px;
+					right: 1px;
+					width: 113px;
+					height: 32px;
+				}
+			}
+
+			&--earn {
+				top: 0;
+				left: 176px;
+				.inner {
+					background-image: url('#{$img}anim-1/earn.png');
+					// left: 0;
+					bottom: -1px;
+					left: 0px;
+					width: 85px;
+					height: 40px;
+				}
+			}
+
+			&--stake {
+				top: 226px;
+				left: 176px;
+				.inner {
+					background-image: url('#{$img}anim-1/stake.png');
+					// left: 0;
+					bottom: -10px;
+					left: 0px;
+					width: 104px;
+					height: 40px;
+				}
+			}
+
+
+	    }
+	}
+
+
+	&.armed {
+		.orbit {
+		    @include vp(animation, rotating 240s linear infinite);
+			.satelite {
+			    @include vp(animation, rotatingReverse 240s linear infinite);
+			}
+		}
+	}
+
+	&.triggered {
+		.middle {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+
+		.ring-1 {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 1.5s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+
+		.ring-2 {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 1.5s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+
+		.ring-3 {
+			@include vp(transform, scale(1, 1));
+			@include vp(transition, all 1.5s 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+		}
+
+		.orbit {
+			opacity: 1;
+			@include vp(transition, opacity 3s 4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+		}
+
+	}
+}
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotatingReverse /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotatingReverse {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}

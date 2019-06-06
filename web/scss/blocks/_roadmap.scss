@@ -1,0 +1,240 @@
+.row.row--roadmap {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	// height: 755px;
+	height: 2480px;
+	overflow: hidden;
+
+	// @include respond-min($r_tablet) {
+	// 	height: 600px;
+	// }
+	@include respond-min($r_desktop) {
+		height: 1950px;
+	// 	// height: 736px;
+	// 	// position: relative;
+	}
+
+	
+	h2.row-title {
+		margin-top: 88px;
+		@include respond-min($r_desktop) {
+			margin-top: 120px;
+		}
+
+	}
+	
+
+	.roadmap-holder {
+		// background-color: rgba(0,0,255,0.5);
+		position: relative;
+		overflow: hidden;
+
+		@include respond-min($r_tablet) {
+			margin-left: 62px;
+		}
+		@include respond-min($r_desktop) {
+			margin-left: 0;
+		}
+
+
+		// .line {
+		// 	background-color: $color_light;
+		// 	left: 24px;
+		// 	width: 1px;
+		// 	bottom: 10px;
+		// 	top: 30px;
+		// 	// height: 100%;
+		// 	position: absolute;
+		// 	@include respond-min($r_desktop) {
+		// 		background-color: $color_light;
+		// 		left: 219px;
+		// 		top: 98px;
+		// 	}
+
+		// }
+
+		.item-holder {
+			margin-left: 5px;
+			margin-top: 5px;
+
+			@include respond-min($r_desktop) {
+				margin-top: 58px;
+			}
+
+
+			.item {
+				// background-color: rgba(255,0,0,0.5);
+				margin-bottom: 20px;
+				position: relative;
+				overflow: hidden;
+				padding-bottom: 40px;
+				margin-bottom: -20px;
+
+				.marker {
+					background-image: url('#{$img}roadmap-item-mobile.png');
+					background-size: 100% auto;
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					width: 68px;
+					height: 35px;
+					position: absolute;
+					left: 2px;
+					top: 5px;
+					z-index: 10;
+					opacity: 0;
+
+					@include respond-min($r_desktop) {
+						background-image: url('#{$img}roadmap-item.png');
+						// background-color: rgba(0,255,0,0.5);
+						left: 184px;
+						width: 790px;
+						height: 64px;
+						top: 5px;
+
+					}
+
+				}
+				.inner-line {
+					background-color: $color_light;
+					left: 20px;
+					width: 1px;
+					bottom: 0px;
+					top: 30px;
+					position: absolute;
+					z-index: 5;
+					opacity: 0;
+
+					@include respond-min($r_desktop) {
+						// background-color: $color_light;
+						left: 214px;
+						top: 30px;
+					}
+
+					&--rainbow {
+						background-color: transparent;
+						background-image: url('#{$img}chain-rainbow.png');
+						background-size: auto 100%;
+						background-position: 50% 0;
+						background-repeat: no-repeat;
+
+					}
+				}
+
+				.date {
+					color: $color_light;
+					margin-left: 94px;
+				    font-family: 'Maison Neue Mono', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				    margin-top: 24px;
+				    font-size: 22px;
+				    opacity: 0;
+
+					@include respond-min($r_desktop) {
+						// background-color: rgba(0,255,0,0.5);
+						margin-left: 0;
+						text-align: right;
+						margin-top: 27px;
+						width: 155px;
+						font-size: 20px;
+				    }
+				}
+
+				.col {
+					// background-color: rgba(0,255,0,0.5);
+					margin-left: 94px;
+					margin-top: 20px;
+
+					@include respond-min($r_desktop) {
+						margin-left: 295px;
+						margin-top: 22px;
+
+						// background-color: rgba(0,255,0,0.5);
+						width: 330px;
+						display: inline-block;
+						vertical-align: top;
+					}
+
+					&--two {
+						@include respond-min($r_desktop) {
+							margin-left: 16px;
+						}
+					}
+
+
+					.point {
+						margin-bottom: 10px;
+						@include respond-min($r_desktop) {
+							margin-bottom: 16px;
+						}
+
+						.title {
+							font-size: 22px;
+							color: $color_light;
+							@include respond-min($r_desktop) {
+								position: relative;
+								padding-left: 30px;
+								font-size: 24px;
+
+							}
+
+
+							.title-arrow {
+								display: none;
+								@include respond-min($r_desktop) {
+									display: block;
+									background-image: url('#{$img}title-arrow-right.png');
+									background-size: 100% auto;
+									background-position: 50% 50%;
+									background-repeat: no-repeat;
+									position: absolute;
+									width: 17px;
+									left: 0;
+									top: 4px;
+									height: 14px;
+								}
+
+							}
+						}
+						.list {
+							padding-top: 24px;
+							span {
+								font-weight: 100;
+								color: $color_light;
+								font-size: 14px;
+								display: block;
+								margin-bottom: 5px;
+
+								@include respond-min($r_desktop) {
+									font-size: 16px;
+									margin-left: 30px;
+									margin-bottom: 13px;
+								}
+
+
+								// &:after {
+								// 	content:", ";
+								// 	color: $color_light;
+								// }
+
+							}
+						}
+					}
+				}
+
+				&.triggered {
+					.marker {
+						opacity: 1;
+						@include vp(transition, opacity 0.5s);
+					}
+					.inner-line{
+						opacity: 1;
+						@include vp(transition, opacity 0.5s);
+					}
+					.date{
+						opacity: 1;
+						@include vp(transition, opacity 0.5s);
+					}
+				}
+			}
+		}
+	}	
+}

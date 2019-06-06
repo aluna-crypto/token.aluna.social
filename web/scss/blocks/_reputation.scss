@@ -1,0 +1,329 @@
+.row.row--reputation {
+	padding-bottom: 50px;
+	border-bottom: 1px solid $color_grey;
+
+	
+	h2.row-title {
+		@include respond-min($r_desktop) {
+
+			margin-top: 160px;
+
+		}
+	}
+	
+
+	@include respond-min($r_desktop) {
+		padding-bottom: 230px;
+		.col {
+			display: inline-block;
+			width: 400px;
+			vertical-align: top;
+			// background-color: rgba(0,255,0,0.5);
+			width: 480px;
+
+			&--right {
+				margin-left: 10px;
+			}
+		}
+	}
+
+
+	p {
+		font-weight: 100;
+		color: $color_light;
+		font-size: 20px;
+		line-height: 34px;
+		margin-top: 48px;
+		@include respond-min($r_tablet) {
+			margin-left: 12px;
+		}
+		@include respond-min($r_desktop) {
+			margin-top: 28px;
+			font-size: 22px;
+			margin-left: 0;
+			line-height: 38px;
+		}
+
+	}
+	
+	h3 {
+		font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		color: $color_light;
+		font-size: 28px;
+		letter-spacing: 6.5px;
+		font-weight: 400;
+		padding-top: 0;
+		margin-bottom: 0;
+		margin-top: 50px;
+
+		@include respond-min($r_desktop) {
+			margin-top: 22px;
+			margin-left: 45px;
+		}
+
+	}
+
+	.icon-points {
+		// background-color: rgba(0,255,0,0.5);
+		margin-top: 30px;
+
+		@include respond-min($r_desktop) {
+			margin-left: 45px;
+		}
+
+		.point {
+			// background-color: rgba(255,0,0,0.5);
+			margin-bottom: 10px;
+
+			@include respond-min($r_desktop) {
+				margin-bottom: 24px;
+			}
+
+
+			.icon, .text, .after {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.icon {
+				background-size: 100% auto;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				width: 17px;
+				height: 17px;
+				@include respond-min($r_desktop) {
+					width: 24px;
+					height: 24px;
+				}
+
+			}
+
+			.text {
+				color: $color_light;
+				margin-top: 2px;
+				margin-left: 8px;
+				font-weight: 100;
+				font-size: 13px;
+				@include respond-min($r_desktop) {
+					font-size: 19px;
+				}
+
+			}
+
+			.after {
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				color: $color_gold;
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: 100;
+				margin-top: 2px;
+				@include respond-min($r_desktop) {
+					font-size: 19px;
+					margin-left: 10px;
+				}
+			}
+			&--heart {
+				.icon {
+					background-image: url('#{$img}heart-full.png');
+
+				}
+			}
+			&--empty-heart {
+				.icon {
+					background-image: url('#{$img}heart-empty.png');
+
+				}
+			}
+
+
+		}
+
+
+	}
+
+	.badges {
+		// background-color: rgba(255,0,0,0.5);
+		font-size: 0;
+		margin-top: 70px;
+		@include respond-min($r_desktop) {
+			margin-top: 120px;
+		}
+
+
+		.badge {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			// background-color: rgba(0,0, 255,0.5);
+			height: 150px;
+			position: relative;
+			opacity: 0;
+
+			font-size: 16px;
+				@include vp(transform, scale(0.001,0.001));
+
+			@include respond-min($r_tablet) {
+				height: 180px;
+			}
+			@include respond-min($r_desktop) {
+				width: 25%;
+				height: auto;
+			}
+
+
+
+			.icon {
+				background-image: url('#{$img}feature-icon-outline.png');
+				background-size: 100% auto;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				width: 72px;
+				height: 72px;
+				margin: 0 auto; 
+				overflow: hidden;
+				// position: absolute;
+				@include vp(transition, background-image 0.4s);
+
+				@include respond-min($r_tablet) {
+					width: 90px;
+					height: 90px;
+				}
+
+				@include respond-min($r_desktop) {
+					// left: 0;
+					width: 153px;
+					height: 153px;
+				}
+
+
+				.icon-inner {
+					background-size: 100% auto;
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					width: 34px;
+					height: 34px;
+					margin-left: 19px;
+					margin-top: 19px;
+
+					@include vp(transition, all 0.4s);
+
+					@include respond-min($r_tablet) {
+						width: 40px;
+						height: 40px;
+						margin-left: 25px;
+						margin-top: 24px;
+					}
+
+
+					@include respond-min($r_desktop) {
+						background-size: 65px auto;
+						width: 153px;
+						height: 153px;
+						margin-left: 0;
+						margin-top: 0;
+					}
+
+				}
+			}
+
+			.name {
+				color: $color_light;
+				font-weight: 900;
+				letter-spacing: 5px;
+				text-align: center;
+				margin-top: 15px;
+				font-size: 16px;
+				@include respond-min($r_desktop) {
+					margin-top: 38px;
+					font-size: 30px;
+					font-weight: 400;
+					letter-spacing: 6px;
+				}
+
+			}
+
+			.sub {
+				color: $color_light;
+				font-weight: 100;
+				font-size: 13px;
+				text-align: center;
+				margin-top: 10px;
+
+				.points {
+					color: $color_gold;
+					padding-left: 10px;
+					font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				}
+
+				@include respond-min($r_desktop) {
+					margin-top: 20px;
+					font-size: 20px;
+				}
+			}
+
+			&:hover {
+				.icon {
+					background-image: url('#{$img}feature-icon-outline-hover.png');
+					.icon-inner {
+						@include vp(transform, scale(1.1, 1.1))
+					}
+				}
+			}
+
+			&--one {
+				.icon {
+					.icon-inner {
+						background-image: url('#{$img}badge-1.png');
+					}
+				}
+			}
+			&--two {
+				.icon {
+					.icon-inner {
+						background-image: url('#{$img}badge-2.png');
+					}
+				}
+			}
+			&--three {
+				.icon {
+					.icon-inner {
+						background-image: url('#{$img}badge-3.png');
+					}
+				}
+			}
+			&--four {
+				.icon {
+					.icon-inner {
+						background-image: url('#{$img}badge-4.png');
+					}
+				}
+			}
+		}
+		&.triggered {
+			.badge {
+
+				&--one {
+					opacity: 1;
+					@include vp(transform, scale(1,1));
+					@include vp(transition, all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+				}
+				&--two {
+					opacity: 1;
+					@include vp(transform, scale(1,1));
+					@include vp(transition, all 0.7s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+				}
+				&--three {
+					opacity: 1;
+					@include vp(transform, scale(1,1));
+					@include vp(transition, all 0.7s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+				}
+				&--four {
+					opacity: 1;
+					@include vp(transform, scale(1,1));
+					@include vp(transition, all 0.7s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,217 @@
+.row.row--acquisition {
+	// background: $background;
+	// background-color: rgba(0,255,0,0.5);
+	padding-bottom: 50px;
+	overflow: hidden;
+
+	// @include respond-min($r_tablet) {
+	// 	// height: 840px;
+	// }
+	@include respond-min($r_desktop) {
+		font-size: 0;
+	}
+
+	h2.row-title {
+		// margin-left: 0;
+		margin-bottom: 0;
+
+		@include respond-min($r_desktop) {
+			margin-top: 129px;
+		}
+
+	}
+	
+
+	.col {
+		@include respond-min($r_desktop) {
+			width: 48%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		&--right {
+			margin-top: 50px;
+			@include respond-min($r_desktop) {
+				margin-left: 4%;
+				margin-top: 0;
+			}
+
+		}
+	}
+
+	h2.row-title {
+		@include respond-min($r_desktop) {
+			margin-top: 70px;
+		}
+
+	}
+	p.row-body {
+		margin-top: 20px;
+		@include respond-min($r_desktop) {
+			text-align: left;
+			margin-left: 0;
+			margin-top: 80px;
+			font-size: 24px;
+			line-height: 40px;
+			width: 90%;
+
+			br {
+				display: none;
+			}
+		}
+
+		a {
+			color: $color_light;
+		}
+
+	}
+
+	.info {
+		border: 1px dashed $color_light;
+		color: $color_light;
+		text-align: center;
+		padding: 20px;
+		font-weight: 100;
+		line-height: 28px;
+		@include respond-min($r_desktop) {
+			font-size: 14px;
+			width: 310px;
+			margin-top: 10px;
+		}
+	}
+
+
+	.list {
+		@include respond-min($r_tablet) {
+			margin-left: 13px;
+			margin-top: 30px;
+		}
+
+		@include respond-min($r_desktop) {
+			margin-top: 20px;
+			margin-left: 10px;
+		}
+
+
+		.item {
+			margin-bottom: 20px;
+			color: $color_light;
+
+			@include respond-min($r_desktop) {
+				margin-bottom: 40px;
+			}
+
+
+			.number {
+				display: inline-block;
+				width: 30px;
+				vertical-align: top;
+				font-size: 30px;
+				@include respond-min($r_desktop) {
+					// margin-top: 15px;
+				}
+			}
+
+			.text {
+				font-weight: 100;
+				display: inline-block;
+				vertical-align: top;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				width: 250px;
+				margin-top: 5px;
+				line-height: 28px;
+				text-transform: uppercase;
+
+				a {
+					font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+					color: $color_light;
+				}
+
+				@include respond-min($r_tablet) {
+					width: 520px;
+				}
+				@include respond-min($r_desktop) {
+					font-size: 16px;
+					letter-spacing: 1px;
+					width: 400px;
+					margin-left: 15px;
+				}
+
+
+			}
+		}
+	}
+
+	.onward-link {
+		margin-left: 15px;
+		margin-top: 40px;
+		@include respond-min($r_desktop) {
+			margin-top: -60px;
+			margin-left: 25px;
+		}
+	}
+	// .animation {
+	// 	// background-color: rgba(255,0,0,0.5);
+	// 	background-image: url('#{$img}animation-1.png');
+	// 	background-size: 100% auto;
+	// 	background-position: calc(50% + 5px) 50%;
+	// 	background-repeat: no-repeat;
+	// 	width: 100%;
+	// 	height: 240px;
+
+	// 	@include respond-min($r_tablet) {
+	// 		background-size: 80% auto;
+	// 		height: 440px;
+	// 		// margin-top: 40px;
+	// 	}
+	// 	@include respond-min($r_desktop) {
+	// 		display: inline-block;
+	// 		vertical-align: top;
+	// 		background-size: 100% auto;
+	// 		width: 450px;
+	// 	}
+
+	// }
+
+	// .points {
+	// 	display: none;
+	// 	@include respond-min($r_desktop) {
+	// 		// background-color: rgba(255,0,0,0.5);
+	// 		display: inline-block;
+	// 		vertical-align: top;
+	// 		width: 450px;
+	// 		margin-top: 63px;
+	// 		margin-left: 67px;
+	// 	}
+
+	// 	.point {
+	// 		@include respond-min($r_desktop) {
+	// 			background-image: url('#{$img}bullet-point.png');
+	// 			background-size: 19px auto;
+	// 			background-position: 2px 4px;
+	// 			background-repeat: no-repeat;
+	// 			margin-bottom: 34px;
+
+	// 			color: $color_light;
+	// 			font-weight: 100;
+	// 			font-size: 18px;
+	// 			padding-left: 40px;
+	// 			line-height: 30px;
+	// 		}
+
+	// 	}
+	// }
+	
+	// .learn-more {
+	// 	margin-left: 27px;
+	// 	margin-top: 29px;
+	// 	@include respond-min($r_tablet) {
+	// 		margin-top: 10px;
+	// 	}
+	// 	@include respond-min($r_desktop) {
+	// 	    position: absolute;
+	// 	    left: 50%;
+	// 	    margin-left: 57px;
+	// 	    top: 717px;
+	// 	}
+	// }
+}
