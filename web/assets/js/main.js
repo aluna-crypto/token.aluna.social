@@ -42,13 +42,14 @@ $(function() {
         });
 
         function success(response) {
-            var response = JSON.parse(JSON.parse(response));
+            var response = JSON.parse(response);
             // console.log('test', response);
 
-            if(response.errors.length > 0) {
+            if(response.success == 'false') {
 
-                // console.log("fail", );
-                $('.error-message').html('<div class="type type--error">' + response.errors[0].message + '</div>')
+                var errors = JSON.parse(JSON.parse(response.errors));
+
+                $('.error-message').html('<div class="type type--error">' + errors.errors[0].message + '</div>')
             } else {
                 // console.log("win");
                 $('[name="email"]').val('');
