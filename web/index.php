@@ -10,6 +10,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:title" content="Aluna Social">
   <meta property="og:description" content="A modern crypto-trading terminal, enabling traders to manage all their exchange accounts from one place while leveraging social features.">
+  <meta property="og:url" content="http://alunacrypto.com">
   <meta property="og:image" content="https://aluna.social/img/og-image-landscape.jpg">
 
 	<link rel="stylesheet" href="/css/main.css">
