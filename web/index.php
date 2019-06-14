@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="Aluna Social">
+  <meta property="og:description" content="A modern crypto-trading terminal, enabling traders to manage all their exchange accounts from one place while leveraging social features.">
+  <meta property="og:image" content="https://aluna.social/img/og-image-landscape.jpg">
+
 	<link rel="stylesheet" href="/css/main.css">
 
 	<script
@@ -13,7 +19,7 @@
 	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 	  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-	
+
 
 	<script src="/assets/js/libs/three/three.js"></script>
 	<script src="/assets/js/libs/three/js/WebGL.js"></script>
@@ -53,7 +59,7 @@
 	<div class="wrapper"> <!-- // 294 -->
 		<div class="row row--header">
 			<div class="header-row-inner">
-				
+
 				<a href="/"><div class="logo">
 					Aluna
 				</div></a>
@@ -65,7 +71,7 @@
 
 				<div class="overlay"> <!-- --expanded -->
 					<div class="overlay-inner">
-						
+
 						<a href="/"><div class="logo">
 							Aluna
 						</div></a>
@@ -165,7 +171,7 @@
 							<div class="inner-circle"></div>
 						</span>
 						<span class="after-circle">
-							T STARTED 
+							T STARTED
 							<span class="arrow"></span>
 						</span> -->
 					</a>
@@ -198,7 +204,7 @@
 
 		<div class="row row--features">
 			<div class="row-inner">
-				
+
 				<div class="feature-holder">
 					<div class="feature feature--one">
 						<div class="icon"><div class="icon-mask"><div class="icon-inner"></div></div></div>
@@ -233,7 +239,7 @@
 				<h2 class="row-title">EARN, <br>SPEND AND STAKE</h2>
 
 				<p class="row-body">Social trading evolves with the introduction of our native <br><b>ALN token</b> economy, enabling predictions as a core feature and establishing a community incentivised to share data.</p>
-				
+
 				<div class="animation" id="wp-one">
 					<div class="ring-1"></div>
 					<div class="ring-2"></div>
@@ -252,7 +258,7 @@
 							<div class="inner"></div>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<div class="points">
@@ -284,7 +290,7 @@
 
 				<div class="roadmap-holder">
 					<!-- <div class="line"></div> -->
-					
+
 
 
 					<div class="item-holder">
@@ -297,7 +303,7 @@
 								<div class="point">
 									<div class="title"><span class="title-arrow"></span>Design &amp; Build</div>
 								</div>
-							</div>						
+							</div>
 						</div>
 
 						<div class="item item--highlight">
@@ -319,7 +325,7 @@
 										<span>Poloniex</span>
 									</div>
 								</div>
-							</div>						
+							</div>
 						</div>
 
 						<div class="item">
@@ -336,7 +342,7 @@
 										<span>Binance</span>
 									</div>
 								</div>
-							</div>						
+							</div>
 						</div>
 
 						<div class="item">
@@ -360,7 +366,7 @@
 										<span>Execution – Copy-trading</span>
 									</div>
 								</div>
-							</div>	
+							</div>
 
 							<div class="col col--two">
 								<div class="point">
@@ -370,7 +376,7 @@
 										<span>&nbsp;</span>
 									</div>
 								</div>
-							
+
 								<div class="point">
 									<div class="title">&nbsp;</div>
 									<div class="list">
@@ -379,7 +385,7 @@
 										<span>Social – Reputation System</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 						</div>
 
 						<div class="item">
@@ -387,7 +393,7 @@
 							<div class="inner-line"></div>
 							<div class="date">Q4 2019:</div>
 							<div class="col col--one">
-								
+
 								<div class="point">
 									<div class="title"><span class="title-arrow"></span>Token Sale</div>
 								</div>
@@ -398,7 +404,7 @@
 										<span>Paymentds (Spend)</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 
 							<div class="col col--two">
 								<div class="point">
@@ -407,7 +413,7 @@
 										<span>Execution – Counter-trading</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 						</div>
 
 
@@ -427,7 +433,7 @@
 										<span>Leaderboard Staking</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 
 							<div class="col col--two">
 								<div class="point">
@@ -441,7 +447,7 @@
 										<span>Social – Sentiment Data</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 						</div>
 
 
@@ -466,7 +472,7 @@
 										<span>Open-souce UI</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 
 							<div class="col col--two">
 								<div class="point">
@@ -478,7 +484,7 @@
 										<span>Integration with other token economies</span>
 									</div>
 								</div>
-							</div>		
+							</div>
 						</div>
 
 					</div>
