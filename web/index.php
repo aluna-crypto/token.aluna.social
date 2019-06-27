@@ -191,7 +191,7 @@
 					<img src="/assets/images/video-1.png" alt="">
 				</div>
 
-				<p><b>Aluna</b> combines the best of both trading terminals and social networks to create the next-generation social trading platform. </p>
+				<p><b>Aluna</b> combines the best of trading terminals and social networks to create the next-generation social trading platform. </p>
 
 				<div class="learn-more">
 					<a href="platform.html" class="circle-link">
