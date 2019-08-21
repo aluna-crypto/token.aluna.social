@@ -364,18 +364,13 @@
 							<div class="col col--one">
 								<div class="point">
 									<div class="title"><span class="title-arrow"></span>Token Generation Event</div>
-									<div class="list">
-										<span>Airdrop</span>
-										<span>User Acquisition</span>
-									</div>
 								</div>
 								<div class="point">
-									<div class="title"><span class="title-arrow"></span>Platform Launch</div>
+									<div class="title"><span class="title-arrow"></span>Platform Improvements</div>
 									<div class="list">
-										<span>5-10 Exchanges</span>
-										<span>Subscription Payments</span>
-										<span>Execution – Spot & Margin Trading</span>
-										<span>Execution – Copy-trading</span>
+										<span>Spot & Margin Trading</span>
+										<span>Copy-trading (beta)</span>
+										<span>Counter-copy-trading (beta)</span>
 									</div>
 								</div>
 							</div>
@@ -384,19 +379,20 @@
 								<div class="point">
 									<div class="title">&nbsp;</div>
 									<div class="list">
-										<span>&nbsp;</span>
-										<span>&nbsp;</span>
-									</div>
-								</div>
-
-								<div class="point">
-									<div class="title">&nbsp;</div>
-									<div class="list">
 										<span>Social – Telegram Bot</span>
 										<span>Social – Leaderboard</span>
 										<span>Social – Reputation System</span>
 									</div>
 								</div>
+
+                <div class="point">
+									<div class="title">&nbsp;</div>
+									<div class="list">
+										<span>&nbsp;</span>
+										<span>&nbsp;</span>
+									</div>
+								</div>
+
 							</div>
 						</div>
 
@@ -412,8 +408,11 @@
 								<div class="point">
 									<div class="title"><span class="title-arrow"></span>Token Integration</div>
 									<div class="list">
+										<span>Airdrop</span>
+										<span>User Acquisition</span>
+										<span>Reputation system</span>
 										<span>Rewards (Earn)</span>
-										<span>Paymentds (Spend)</span>
+										<span>Subscription Payments (Spend)</span>
 									</div>
 								</div>
 							</div>
@@ -422,7 +421,7 @@
 								<div class="point">
 									<div class="title"><span class="title-arrow"></span>Platform Improvements</div>
 									<div class="list">
-										<span>Execution – Counter-trading</span>
+										<span>5-10 Exchanges</span>
 									</div>
 								</div>
 							</div>
