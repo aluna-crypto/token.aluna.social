@@ -612,17 +612,6 @@
 						</div>
 					</div>
 
-					<div class="member">
-						<div class="portrait">
-							<img src="/assets/images/staff-gregory.png" alt="">
-						</div>
-						<div class="name">Gregory Damiani</div>
-						<div class="title">DevOps Ninja</div>
-						<div class="links">
-							<a href="https://www.linkedin.com/in/gregorydamiani/" target="_blank" class="link link--linkedin"></a>
-							<!-- <a href="" target="_blank" class="link link--github"></a> -->
-						</div>
-					</div>
 
 				</div>
 			</div>
