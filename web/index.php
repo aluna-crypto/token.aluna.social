@@ -141,7 +141,7 @@
 								<div class="arrow"></div>
 							</a>
 							<a href="https://blog.aluna.social/" target="_blank"  class="arrow-move">
-								<div class="text">Blog</div>
+								<div class="text">BLOG</div>
 								<span class="circle"></span>
 								<div class="arrow"></div>
 							</a>
@@ -306,14 +306,6 @@
 		</div>
 
 
-		<div class="row row--icon-set">
-			<div class="row-inner">
-
-				<img src="/assets/images/long-icon-set.png" alt="">
-
-			</div>
-		</div>
-
 		<div class="row row--news-signup">
 			<div class="row-inner">
 				<div class="info">
@@ -429,6 +421,9 @@
 					<a href="platform.html">
 						PLATFORM
 					</a>
+					<a href="roadmap.html">
+					  ROADMAP	
+					</a>
 					<a href="gamified-trading.html">
 						GAMIFIED TRADING
 					</a>
@@ -436,7 +431,7 @@
 						ALN TOKEN
 					</a>
           <a href="https://blog.aluna.social/" target="_blank">
-            Blog
+           BLOG 
           </a>
 					<a href="faqs.html">
 						FAQs
