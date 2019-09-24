@@ -141,7 +141,7 @@
 								<div class="arrow"></div>
 							</a>
 							<a href="https://blog.aluna.social/" target="_blank"  class="arrow-move">
-								<div class="text">BLOG</div>
+								<div class="text">Blog</div>
 								<span class="circle"></span>
 								<div class="arrow"></div>
 							</a>
