@@ -263,7 +263,7 @@
 		<div class="row row--points">
 			<div class="row-inner">
 
-				<h2 class="row-title">EARN, <br>SPEND AND STAKE</h2>
+				<h2 class="row-title">EARN, <br>SPEND AND PLAY</h2>
 
 				<p class="row-body">Social trading evolves with the introduction of our native <br><b>ALN token</b> economy, enabling predictions as a core feature and establishing a community incentivised to share data.</p>
 
@@ -296,7 +296,7 @@
 						Spend ALN on the platform to get discounted or free access to premium features.
 					</div>
 					<div class="point">
-						Stake ALN in a gamified environment to back your opinions and predictions about the market.
+						Wager ALN in a gamified environment to back your opinions and predictions about the market.
 					</div>
 				</div>
 
