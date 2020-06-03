@@ -71,7 +71,7 @@
 	<div class="wrapper"> <!-- // 294 -->
     <a href='https://aluna.social' target='_blank' style='text-decoration:none;color:#ffffff;'>
       <div style="text-align: center;width: 100%;height: 40px;background-color: #7247d3;color: #ffffff;padding-top: 14px;z-index: 9999; position: fixed;">
-        Our trading platform is live! Join us at https://aluna.social!
+        Copy Trading is now live for Bitfinex! Register for free at https://aluna.social.
       </div>
     </a>
 		<div class="row row--header">
