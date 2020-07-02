@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass -o ../main.css"
+    "compile": "node-sass ./main.scss -o ../css/ --output-style compressed"
   },
   "author": "",
   "license": "ISC",
