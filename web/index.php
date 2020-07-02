@@ -9,8 +9,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:title" content="Aluna Social - Multi-exchange Social Trading Terminal for Crypto Traders and Investors">
-  <meta property="og:description" content="A modern crypto-trading terminal, enabling traders to manage all their exchange accounts from one place while leveraging social features.">
-  <meta property="og:url" content="http://alunacrypto.com">
+  <meta property="og:description" content="A modern crypto trading terminal, enabling traders to manage multiple exchange accounts from one place while leveraging social features.">
+  <meta property="og:url" content="https://token.aluna.social">
   <meta property="og:image" content="https://aluna.social/img/og-image-landscape.jpg">
 
 	<link rel="stylesheet" href="/css/main.css">
@@ -71,7 +71,7 @@
 	<div class="wrapper"> <!-- // 294 -->
     <a href='https://aluna.social' target='_blank' style='text-decoration:none;color:#ffffff;'>
       <div style="text-align: center;width: 100%;height: 40px;background-color: #7247d3;color: #ffffff;padding-top: 14px;z-index: 9999; position: fixed;">
-        Our trading platform is live! Join us at https://aluna.social!
+        BitMEX integration is now LIVE on our Copy Trading Terminal! Register for free at https://aluna.social!
       </div>
     </a>
 		<div class="row row--header">
@@ -111,7 +111,7 @@
 							<div class="social-icons">
 								<a href="https://twitter.com/AlunaSocial" target="_blank" class="icon icon--twitter">twitter</a>
 								<a href="https://www.linkedin.com/company/alunasocial" target="_blank" class="icon icon--linkedin">linkedin</a>
-								<a href="https://medium.com/@aluna" target="_blank" class="icon icon--medium">medium</a>
+								<a href="https://blog.aluna.social/" target="_blank" class="icon icon--medium">medium</a>
 								<a href="https://bitcointalk.org/index.php?topic=5131343" target="_blank" class="icon icon--bitcoin">bitcoin</a>
 								<a href="https://t.me/alunasocial" target="_blank" class="icon icon--telegram">telegram</a>
 								<a href="https://www.youtube.com/channel/UCYBt4Skw5m2z7CM4LdAMREw" target="_blank" class="icon icon--youtube">youtube</a>
@@ -452,12 +452,13 @@
 				<div class="social-icons">
 					<a href="https://twitter.com/AlunaSocial" target="_blank" class="icon icon--twitter">twitter</a>
 					<a href="https://www.linkedin.com/company/alunasocial" target="_blank" class="icon icon--linkedin">linkedin</a>
-					<a href="https://medium.com/@aluna" target="_blank" class="icon icon--medium">medium</a>
+					<a href="https://blog.aluna.social/" target="_blank" class="icon icon--medium">medium</a>
 					<a href="https://bitcointalk.org/index.php?topic=5131343" target="_blank" class="icon icon--bitcoin">bitcoin</a>
 					<a href="https://t.me/alunasocial" target="_blank" class="icon icon--telegram">telegram</a>
 					<a href="https://www.youtube.com/channel/UCYBt4Skw5m2z7CM4LdAMREw" target="_blank" class="icon icon--youtube">youtube</a>
 					<a href="https://github.com/alunacrypto" target="_blank" class="icon icon--github">github</a>
 					<a href="mailto:support@aluna.social" target="_blank" class="icon icon--mail">email</a>
+					<a href="https://holdex.io/x/aluna-social" target="_blank" class="icon icon--holdex">holdex</a>
 				</div>
 
 				<div class="copyright">&copy; 2020 Aluna Social. All rights reserved.</div>
