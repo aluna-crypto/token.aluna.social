@@ -8,9 +8,13 @@
 	h2.row-title {
 		@include respond-min($r_desktop) {
 
-			margin-top: 130px;
-			font-size: 85px;
-			letter-spacing: 14px;
+			// margin-top: 130px;
+			// font-size: 85px;
+			// letter-spacing: 14px;
+
+		    margin-top: 129px;
+		    font-size: 87px;
+		    letter-spacing: 13.8px;
 
 		}
 	}
@@ -56,8 +60,8 @@
 				margin-top: 36px;
 				font-size: 22px;
 				margin-left: 10px;
-				line-height: 38px;
-				width: 520px;
+				line-height: 39px;
+				width: 480px;
 				display: inline-block;
 				vertical-align: top;
 			}
@@ -71,11 +75,12 @@
 		}
 
 		@include respond-min($r_desktop) {
-			display: inline-block;
-			vertical-align: top;
-			width: 350px;
-			margin-left: 96px;
-			padding-top: 0;
+		    display: inline-block;
+		    vertical-align: top;
+		    width: 269px;
+		    margin-left: 208px;
+		    padding-top: 0;
+		    margin-top: -8px;
 				// float: right;
 
 		}
@@ -94,7 +99,7 @@
 				margin: 0 auto;
 				// margin-top: 80px;
 				@include respond-min($r_desktop) {
-					width: 77%;
+					width: 100%;
 				}
 
 			}

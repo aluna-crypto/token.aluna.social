@@ -11,7 +11,7 @@
 			margin-top: 80px;
 		}
 		@include respond-min($r_desktop) {
-			margin-top: 75px;
+			margin-top: 78px;
 		}
 
 
@@ -29,9 +29,13 @@
 				font-size: 70px;
 			}
 			@include respond-min($r_desktop) {
+				font-family: 'Maison Neue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-size: 72px;
 				text-transform: none;
 				text-align: left;
 				margin-bottom: 0;
+				margin-left: -6px;
+				letter-spacing: 1px;
 				line-height: 68px;
 			}
 		}
@@ -59,8 +63,8 @@
 	}
 
 	.get-started {
-		margin-top: 125px;
-		margin-left: 40px;
+		margin-top: 136px;
+		margin-left: 18px;
 
 
 		@include respond-min($r_tablet) {
@@ -69,8 +73,8 @@
 		}
 
 		@include respond-min($r_desktop) {
-			margin-top: 103px;
-			margin-left: 25px;
+			margin-top: 123px;
+			margin-left: 30px;
 		}
 	}
 }

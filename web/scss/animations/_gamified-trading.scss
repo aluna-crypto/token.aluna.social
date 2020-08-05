@@ -1,0 +1,175 @@
+#gt-anim-1 {
+	background-image: url('#{$img}anim-3/gt-1-bg.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 34px;
+	height: 250px;
+	position: relative;
+
+	@include respond-min($r_tablet) {
+		width: 264px;
+		margin: 0 auto;
+	}
+	@include respond-min($r_desktop) {
+		width: 350px;
+		margin-left: 106px;
+	}
+
+
+
+	img {
+		display: none;
+	}
+
+	.yes {
+		background-image: url('#{$img}anim-3/gt-1-yes.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+	    top: 90px;
+	    width: 116px;
+	    height: 47px;
+		
+		// @include respond-min($r_tablet) {
+		
+		@include respond-min($r_desktop) {
+
+			position: absolute;
+			top: 115px;
+			width: 151px;
+			height: 47px;
+		}
+		@include vp(transition, all 0.01s);
+		@include vp(transition-delay, 0.38s);
+	}
+
+	.cursor {
+		background-image: url('#{$img}anim-3/gt-1-hand.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 150px;
+		left: 70px;
+		width: 45px;
+		height: 48px;
+
+		@include respond-min($r_desktop) {
+
+			top: 200px;
+			left: 90px;
+			width: 45px;
+			height: 48px;
+		}
+
+		@include vp(transition, all 0.8s);
+	}
+
+	&.triggered {
+		.cursor {
+			top: 126px;
+			@include respond-min($r_desktop) {
+				top: 150px;
+			}
+			@include vp(transform, scale(1.2));
+		}
+		.yes {
+			background-image: url('#{$img}anim-3/gt-1-over.png');
+		}
+
+	}
+}
+
+
+
+
+
+#gt-anim-2 {
+	background-image: url('#{$img}anim-3/gt-2-bg-win.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 34px;
+	height: 300px;
+	position: relative;
+	@include vp(transition-delay, 1s);
+
+	@include respond-min($r_tablet) {
+		width: 264px;
+		margin: 0 auto;
+	}
+	@include respond-min($r_desktop) {
+		width: 350px;
+		margin-left: 106px;
+	}
+
+
+
+	img {
+		display: none;
+	}
+
+	.yes {
+		background-image: url('#{$img}anim-3/gt-2-yes.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+	    top: 60px;
+	    width: 107px;
+	    left: 3px;
+	    height: 47px;
+
+		
+		// @include respond-min($r_tablet) {
+		
+		@include respond-min($r_desktop) {
+
+			position: absolute;
+			top: 76px;
+			left: 8px;
+			width: 139px;
+			height: 47px;
+		}
+		@include vp(transition, all 0.01s);
+		@include vp(transition-delay, 0.38s);
+	}
+
+	.cursor {
+		background-image: url('#{$img}anim-3/gt-1-hand.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 150px;
+		left: 0px;
+		width: 45px;
+		height: 48px;
+
+		@include respond-min($r_desktop) {
+
+			top: 170px;
+			left: 10px;
+			width: 45px;
+			height: 48px;
+		}
+
+		@include vp(transition, all 0.8s);
+	}
+
+	&.triggered {
+		background-image: url('#{$img}anim-3/gt-2-bg.png');
+
+		.cursor {
+			top: 94px;
+			@include respond-min($r_desktop) {
+				top: 113px;
+			}
+			@include vp(transform, scale(1.2));
+		}
+		.yes {
+			background-image: url('#{$img}anim-3/gt-2-over.png');
+		}
+
+	}
+}

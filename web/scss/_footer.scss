@@ -1,5 +1,6 @@
 .row.row--footer {
 	background-color: $color_light;
+	// opacity: 0.5;
 	// background-color: rgba(255,255,255,0.5);
 	position: relative;
 
@@ -56,12 +57,15 @@
 			padding-top: 180px;
 
 			a {
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 				display: inline-block;
 				// background-color: rgba(255,0,0,0.5);
 				text-decoration: none;
 				color: $background;
-				margin-left: 31px;
-				margin-right: 31px;
+				margin-left: 28.5px;
+				margin-right: 28.5px;
+				font-size: 15px;
+				font-weight: 800;
 
 				&:hover {
 					text-decoration: underline;
@@ -96,8 +100,8 @@
 
 			@include respond-min($r_desktop) {
 				background-size: 20px auto;
-				margin-right: 10px;
-				margin-left: 10px;
+				margin-right: 7px;
+				margin-left: 7px;
 			}
 
 
@@ -124,9 +128,6 @@
 			}
 			&--mail {
 				background-image: url('#{$img}social-dark-mail.png');
-			}
-			&--holdex {
-				background-image: url('#{$img}social-dark-holdex.png');
 			}
 
 			&:hover {

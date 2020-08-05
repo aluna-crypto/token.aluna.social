@@ -13,8 +13,8 @@
 			// background-color: rgba(0,0,255,0.5);
 			position: relative;
 			height: 100%;
-			margin-left: calc( (100vw - 998px) / 2);
-			margin-right: calc( (100vw - 998px) / 2);
+			margin-left: calc( (100% - 998px) / 2);
+			margin-right: calc( (100% - 998px) / 2);
 		}
 
 	}
@@ -30,6 +30,7 @@
 		text-indent: -9999em;
 		top: 50px;
 		width: 129px;
+		width: 131px;
 
 		@include respond-min($r_tablet) {
 			left: 40px;
@@ -57,21 +58,79 @@
 		width: 32px;
 		z-index: 50;
 
+
 		@include respond-min($r_tablet) {
 			right: 32px;
 		}
 		@include respond-min($r_desktop) {
+			// background: none;
 			background-size: 25px auto;
 			top: 89px;
-			right: -38px;
+
+			.line {
+				background-color: rgba(255,255,255,1);
+				width: 26px;
+				height: 2px;
+				margin-left: 4px;
+				margin-bottom: 4px;
+
+				&:first-child {
+					margin-top: 9px;
+				}
+
+				&:last-child{
+					width: 20px;
+					@include vp(transition, width 0.4s);
+				}
+			}
+
+			&:hover {
+				.line-3 {
+					width: 26px;
+				}
+
+			}
+		}
+
+		&--expanded {
+			// background-color: red;
+			@include respond-min($r_desktop) {
+				.line-3 {
+					width: 26px !important;
+				}
+			}
+		}
+
+		@include respond-min(1025) {
+			// top: 89px;
+			right: -30px;
+
+
+		}
+		&--open {
+			@include respond-min($r_desktop) {
+				background: none;
+			}
+
+		}
+		&--close {
+			@include respond-min($r_desktop) {
+				right: 28px;
+				// right: 28px;
+			}
+
+			@include respond-min(1025) {
+				right: -34px;
+			}
 		}
 	}
 
 
 	.overlay {
 		background-color: $background;
-		// background-image: url('#{$img}_head.png');
-		// background-position: 50% -132px;
+		// background-color: rgba(0,255,0,0.5);
+		// background-image: url('#{$img}_debugmenu.png');
+		// background-position: 50% -40px;
 		// background-repeat: no-repeat;
 
 		position: fixed;
@@ -85,6 +144,9 @@
 		@include respond-min($r_desktop) {
 			left: 0;
 			// height: 520px;
+			width: 4000px;
+			left: 50%;
+			margin-left: -2000px;
 
 			.overlay-inner {
 				width: 992px;
@@ -96,9 +158,23 @@
 		// &--expanded {
 		// 	display: block;
 		// }
+
+		.logo {
+			@include respond-min($r_desktop) {
+				left: -3px;
+			}
+			// @include respond-min(1025) {
+			// 	left: 5px;
+			// }
+
+
+		}
 		
-		.nav-handle {
+		.nav-handle { // close one
 			background-image: url('#{$img}header-close.png'); // always close
+			.line {
+				display: none;
+			}
 		}
 		.newsletter-block {
 			display: none;
@@ -108,7 +184,7 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 550px;
-				margin-top: 165px;
+				margin-top: 256px;
 			}
 
 			h3 {
@@ -116,9 +192,18 @@
 				color: $color_light;
 				font-size: 20px;
 				// font-weight: 100;
+				@include respond-min($r_desktop) {
+					margin-bottom: 51px;
+				}
 
 				&.send-email {
 					margin-top: 46px;
+
+					@include respond-min($r_desktop) {
+						font-weight: 400;
+						margin-top: 48px;
+						margin-bottom: 17px;
+					}
 				}
 			}
 
@@ -127,11 +212,41 @@
 				padding: 10px;
 				width: 520px;
 				height: 52px;
+				position: relative;
+				@include respond-min($r_desktop) {
+					width: 441px;
+				}
+
+				.error-message {
+					position: absolute;
+					// background-color: rgba(255,0,0,0.5);
+					top: -33px;
+					left: -2px;
+					height: 20px;
+					width: 400px;
+
+					.type {
+						position: absolute;
+						top: 50%;
+						@include vp(transform, translatey(-50%));
+						font-size: 15px;
+						font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+						&--error {
+							color: #FF2323;
+						}
+
+						&--success {
+							color: #76FF8C;
+						}
+					}
+				}
 
 				input {
 					border: none;
 					height: 34px;
 					background-color: transparent;
+					
 
 					&[type="text"] {
 						font-size: 20px;
@@ -139,6 +254,23 @@
 						color: $color_light;
 						width: 440px;
 						font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+						@include respond-min($r_desktop) {
+							width: 370px;
+							padding-left: 10px;
+							letter-spacing: -0.7px;
+						}
+
+						&::placeholder { /* Firefox, Chrome, Opera */ 
+						    color: $color_light; 
+						} 
+						  
+						&:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+						    color: $color_light; 
+						} 
+						  
+						&::-ms-input-placeholder { /* Microsoft Edge */ 
+						    color: $color_light; 
+						} 
 
 					}
 					&[type="submit"] {
@@ -160,10 +292,13 @@
 				color: $color_light;
 				font-size: 18px;
 				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				// margin-bottom: 30px;
+
+
 			}
 
 			.social-icons {
-				margin-top: 40px;
+				margin-top: 45px;
 				height: 48px;
 				margin-left: -10px;
 
@@ -198,9 +333,6 @@
 					&--github {
 						background-image: url('#{$img}social-github.png');
 					}
-					&--holdex {
-						background-image: url('#{$img}social-holdex.png');
-					}
 				}
 			}
 
@@ -223,8 +355,8 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 250px;
-				margin-left: 40px;
-				margin-top: 18px;
+				margin-left: 71px;
+				margin-top: 55px;
 			}
 
 			a {
@@ -279,19 +411,6 @@
 						}
 						// text-align: right;
 
-						&--only-hover {
-
-							.text {
-								color: $color_light;
-							}
-							.inner-circle {
-								background-color: $background;
-							}
-							&:hover {
-
-
-							}
-						}
 					}
 
 					&.after-circle {
@@ -301,12 +420,54 @@
 
 				&:hover { // a
 
-					span.circle--only-hover {
-						.text {
-							color: $background;
-						}
-						.inner-circle {
-							background-color: $color_light;
+
+					
+				}
+
+				&.arrow-move {
+					position: relative;
+					display: block;
+					height: 50px;
+					@include respond-min($r_desktop) {
+						height: 42px;
+					}
+					.text {
+						color: #fff;
+						font-size: 25px;
+						font-weight: 400;
+						position: relative;
+						z-index: 2;
+					}
+
+
+					.circle {
+						background-color: #666666;
+						width: 50px;
+						left: 207px;
+						top: -39px;
+						height: 50px;
+						border-radius: 25px;
+						z-index: 1;
+						@include vp(transform, scale(0.0001));
+						@include vp(transition, all 0.4s);
+					}
+
+					.arrow {
+						background-image: url('#{$img}text-arrow-right.png');
+						background-size: 14px auto;
+						background-position: 50% 50%;
+						background-repeat: no-repeat;
+						width: 20px;
+						height: 20px;
+						position: absolute;
+						top: 2px;
+						left: 221px;
+						z-index: 2;
+					}
+
+					&:hover {
+						.circle {
+							@include vp(transform, scale(1));
 						}
 					}
 					

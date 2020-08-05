@@ -6,7 +6,7 @@
 	border-bottom: 1px solid $color_grey;
 	padding-bottom: 50px;
 	@include respond-min($r_desktop) {
-		padding-bottom: 98px;
+		padding-bottom: 81px;
 	}
 
 	// margin-bottom: 50px;
@@ -38,7 +38,7 @@
 		}
 
 		@include respond-min($r_desktop) {
-			margin-top: 106px;
+			margin-top: 98px;
 			font-size: 90px;
 			letter-spacing: 11px;
 			font-weight: 100;

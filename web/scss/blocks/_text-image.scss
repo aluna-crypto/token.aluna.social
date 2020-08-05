@@ -1,7 +1,40 @@
 .row.row--text-image {
-	padding-bottom: 50px;
+	padding-bottom: 150px;
 	border-bottom: 1px solid $color_grey;
 	// background-color: rgba(255,0,0,0.5);
+
+	.row-inner {
+		padding-left: 30px;
+	}
+
+	&.no-notch {
+		@include respond-min($r_desktop) {
+			.row-inner {
+				padding-left: 0;
+
+				.block {
+					p {
+						line-height: 33px;
+						position: relative;
+						span.mono {
+							margin-left: 20px;
+							font-size: 16px;
+							font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+							position: absolute;
+							left: 104px;
+							width: 200px;
+						}
+					}
+				}
+				.onward-link {
+					margin-top: 183px;
+					margin-left: 25px;
+				}
+			}
+			padding-bottom: 55px;
+		}
+
+	}
 
 	
 
@@ -17,12 +50,12 @@
 		// background-color: rgba(0,255,0,0.5);
 		margin-bottom: 110px;
 		@include respond-min($r_desktop) {
-			margin-bottom: 174px;
+			margin-bottom: 155px;
 		}
 
 		&.text-only {
 			@include respond-min($r_desktop) {
-				margin-bottom: 91px;
+				margin-bottom: 155px;
 			}
 			p {
 				@include respond-min($r_desktop) {
@@ -54,10 +87,25 @@
 				margin-top: 23px;
 				font-size: 22px;
 				margin-left: 0;
-				line-height: 38px;
-				width: 520px;
+				line-height: 40px;
+				width: 506px;
 				display: inline-block;
 				vertical-align: top;
+			}
+		}
+
+		&.large-image {
+			@include respond-min($r_desktop) {
+
+				p {
+					width: 390px;
+				}
+
+				.image {
+					width: 519px;
+					margin-left: 40px;
+					@include vp(transform, translate(53px, -40px));
+				}
 			}
 		}
 	}
@@ -72,10 +120,11 @@
 		@include respond-min($r_desktop) {
 			display: inline-block;
 			vertical-align: top;
+			padding-top: 35px;
 			width: 350px;
 			margin-left: 106px;
 				// float: right;
-
+			
 		}
 
 
@@ -97,8 +146,20 @@
 	}
 
 	.onward-link {
-		margin-left: 15px;
+		// margin-left: 30px;
 		margin-top: 30px;
+
+		.circle-link {
+			margin-left: 0;
+		}
+		@include respond-min($r_desktop) {
+			// margin-left: 30px;
+			margin-top: -65px;
+
+			.circle-link {
+				margin-left: 26px;
+			}
+		}
 	}
 
 	&.large-image {
@@ -121,8 +182,8 @@
 				margin-bottom: 114px;
 
 				p {
-						width: 230px;
-						margin-top: 55px;
+					width: 230px;
+					margin-top: 55px;
 				}
 			}
 
@@ -141,7 +202,7 @@
 
 			.onward-link {
 				margin-top: 125px;
-				margin-left: 20px;
+				margin-left: 0px;
 			}
 		}
 

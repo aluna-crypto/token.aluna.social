@@ -28,10 +28,13 @@
 	}
 
 	.ring-1 {
-		background-image: url('#{$img}anim-1/ring-1.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		// background-image: url('#{$img}anim-1/ring-1.png');
+		// background-size: 100% auto;
+		// background-repeat: no-repeat;
+		// background-position: 50% 50%;
+		border-radius: 50%;
+		border: 2px solid #565656;
+
 
 		@include vp(transform, scale(0.001, 0.001));
 
@@ -46,10 +49,12 @@
 	}
 
 	.ring-2 {
-		background-image: url('#{$img}anim-1/ring-2.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		// background-image: url('#{$img}anim-1/ring-2.png');
+		// background-size: 100% auto;
+		// background-repeat: no-repeat;
+		// background-position: 50% 50%;
+		border-radius: 50%;
+		border: 2px solid #565656;
 
 		@include vp(transform, scale(0.001, 0.001));
 
@@ -63,10 +68,12 @@
 	}
 
 	.ring-3 {
-		background-image: url('#{$img}anim-1/ring-3.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
+		// background-image: url('#{$img}anim-1/ring-3.png');
+		// background-size: 100% auto;
+		// background-repeat: no-repeat;
+		// background-position: 50% 50%;
+		border-radius: 50%;
+		border: 2px solid #565656;
 
 		@include vp(transform, scale(0.001, 0.001));
 
@@ -88,8 +95,9 @@
 	    top: 50%;
 	    margin-left: -147px;
 	    margin-top: -130px;
-		opacity: 0;
+		opacity: 1;
 	    // @include vp(animation, rotating 240s linear infinite);
+	    @include vp(transform, rotate(-60deg));
 
 	    &.show {
 	    	opacity: 1;
@@ -97,10 +105,14 @@
 
 
 	    .satelite {
-	    	width: 10px;
-	    	height: 10px;
+	    	width: 8px;
+	    	height: 8px;
 	    	position: absolute;
-	    	// background-color: rgba(0,0,255,0.5);
+	    	opacity: 0;
+	    	background-color: rgba(0,0,255,0.5);
+	    	background-color: #fff;
+	    	border-radius: 50%;
+	    	@include vp(transform, rotate(60deg));
 
 		    // @include vp(animation, rotatingReverse 240s linear infinite);
 			
@@ -113,32 +125,35 @@
 			&--spend {
 		    	top: 102px;
 		    	left: 28px;	
+
 				.inner {
-					background-image: url('#{$img}anim-1/spend.png');
+					background-image: url('#{$img}anim-1/earn.png');
 					// left: 0;
-					bottom: -7px;
-					right: 1px;
-					width: 113px;
-					height: 32px;
+					bottom: -15px;
+					right: 19px;
+					width: 85px;
+					height: 40px;
 				}
 			}
 
 			&--earn {
 				top: 0;
 				left: 176px;
+
 				.inner {
-					background-image: url('#{$img}anim-1/earn.png');
+					background-image: url('#{$img}anim-1/spend.png');
 					// left: 0;
-					bottom: -1px;
-					left: 0px;
-					width: 85px;
-					height: 40px;
+					bottom: -7px;
+					left: 27px;
+					width: 113px;
+					height: 32px;
 				}
 			}
 
 			&--stake {
 				top: 226px;
 				left: 176px;
+				
 				.inner {
 					background-image: url('#{$img}anim-1/stake.png');
 					// left: 0;
@@ -154,16 +169,21 @@
 	}
 
 
-	&.armed {
-		.orbit {
-		    @include vp(animation, rotating 240s linear infinite);
-			.satelite {
-			    @include vp(animation, rotatingReverse 240s linear infinite);
-			}
-		}
-	}
+	// &.armed {
+	// }
 
 	&.triggered {
+		.orbit {
+		    // @include vp(animation, rotating 240s linear infinite);
+		    @include vp(transform, rotate(0));
+			@include vp(transition, transform 10s);
+
+			.satelite {
+			    // @include vp(animation, rotatingReverse 240s linear infinite);
+			    @include vp(transform, rotate(0));
+				@include vp(transition, transform 10s);
+			}
+		}
 		.middle {
 			@include vp(transform, scale(1, 1));
 			@include vp(transition, all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
@@ -184,12 +204,16 @@
 			@include vp(transition, all 1.5s 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275));
 		}
 
+
+	}
+
+	&.after {
+		
 		.orbit {
 			opacity: 1;
-			@include vp(transition, opacity 3s 4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			// @include vp(transition, opacity 3s 4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
 
 		}
-
 	}
 }
 

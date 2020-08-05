@@ -16,6 +16,7 @@
 		font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		margin-top: 70px;
 		margin-left: 26px;
+		font-size: 17px;
 		@include respond-min($r_desktop) {
 			margin-top: 35px;
 			margin-left: 10px;
