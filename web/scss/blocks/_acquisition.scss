@@ -9,6 +9,7 @@
 	// }
 	@include respond-min($r_desktop) {
 		font-size: 0;
+		padding-bottom: 90px;
 	}
 
 	h2.row-title {
@@ -16,7 +17,73 @@
 		margin-bottom: 0;
 
 		@include respond-min($r_desktop) {
-			margin-top: 129px;
+			margin-top: 140px;
+			text-align: center;
+		}
+
+	}
+
+
+	.head-img {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@include respond-min($r_desktop) {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			@include respond-min($r_desktop) {
+				width: 80%;
+			}
+		}
+		// user-aquisition-img
+		// background-image: url('#{$img}user-aquisition-outline.png');
+		// background-size: 99.7% 99.5%;
+		// background-position: 50% 50%;
+		// background-repeat: no-repeat;
+	}
+
+	#token-swaps {
+		color: #fff;
+		margin-bottom: 40px;
+
+		span {
+			font-size: 30px;
+    		font-family: 'Maison Neue', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		}
+
+		.open {
+			font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-size: 26px;
+			text-align: center;
+			span {
+				color: #12BED6;
+			}
+		}
+
+		.closes {
+			font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-size: 26px;
+			text-align: center;
+			span {
+				color: #FAFF00;
+
+			}
+		}
+
+		.open, .closes {
+			margin-bottom: 28px;
+			&.show {
+				display: block;
+			}
+			&.hide {
+				display: none;
+			}
 		}
 
 	}
@@ -40,7 +107,7 @@
 
 	h2.row-title {
 		@include respond-min($r_desktop) {
-			margin-top: 70px;
+			margin-top: 140px;
 		}
 
 	}
@@ -66,7 +133,13 @@
 	}
 
 	.info {
-		border: 1px dashed $color_light;
+		
+		background-image: url('#{$img}user-aquisition-outline.png');
+		background-size: 99.7% 99.5%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		// border: 1px dashed $color_light;
 		color: $color_light;
 		text-align: center;
 		padding: 20px;
@@ -76,6 +149,11 @@
 			font-size: 14px;
 			width: 310px;
 			margin-top: 10px;
+
+			b {
+				margin-top: -9px;
+				display: block;
+			}
 		}
 	}
 
@@ -97,7 +175,7 @@
 			color: $color_light;
 
 			@include respond-min($r_desktop) {
-				margin-bottom: 40px;
+				margin-bottom: 38px;
 			}
 
 

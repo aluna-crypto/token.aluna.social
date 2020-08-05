@@ -20,9 +20,12 @@
 			vertical-align: top;
 			// background-color: rgba(0,255,0,0.5);
 			width: 480px;
-
+			
+			&--left {
+				width: 487px;
+			}
 			&--right {
-				margin-left: 10px;
+				margin-left: 1px;
 			}
 		}
 	}
@@ -47,18 +50,20 @@
 	}
 	
 	h3 {
-		font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		// font-family: 'gnuolaneregular',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-family: 'Maison Neue',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		color: $color_light;
 		font-size: 28px;
-		letter-spacing: 6.5px;
-		font-weight: 400;
+		// letter-spacing: 6.5px;
+		letter-spacing: 0;
+		font-weight: 800;
 		padding-top: 0;
 		margin-bottom: 0;
 		margin-top: 50px;
 
 		@include respond-min($r_desktop) {
-			margin-top: 22px;
-			margin-left: 45px;
+			margin-top: 28px;
+			margin-left: 125px;
 		}
 
 	}
@@ -68,7 +73,11 @@
 		margin-top: 30px;
 
 		@include respond-min($r_desktop) {
-			margin-left: 45px;
+			// margin-left: 45px;
+		    margin-left: 125px;
+		    width: 500px;
+		    // margin-bottom: 35px;
+		    margin-top: 35px;
 		}
 
 		.point {
@@ -76,7 +85,7 @@
 			margin-bottom: 10px;
 
 			@include respond-min($r_desktop) {
-				margin-bottom: 24px;
+				margin-bottom: 22px;
 			}
 
 
@@ -105,7 +114,7 @@
 				font-weight: 100;
 				font-size: 13px;
 				@include respond-min($r_desktop) {
-					font-size: 19px;
+					font-size: 22px;
 				}
 
 			}
@@ -118,7 +127,7 @@
 				font-weight: 100;
 				margin-top: 2px;
 				@include respond-min($r_desktop) {
-					font-size: 19px;
+					font-size: 17px;
 					margin-left: 10px;
 				}
 			}
@@ -147,6 +156,8 @@
 		margin-top: 70px;
 		@include respond-min($r_desktop) {
 			margin-top: 120px;
+		    width: 1098px;
+		    margin-left: -47px;
 		}
 
 
@@ -235,7 +246,7 @@
 				font-size: 16px;
 				@include respond-min($r_desktop) {
 					margin-top: 38px;
-					font-size: 30px;
+					font-size: 28px;
 					font-weight: 400;
 					letter-spacing: 6px;
 				}
@@ -251,24 +262,27 @@
 
 				.points {
 					color: $color_gold;
-					padding-left: 10px;
+					padding-left: 7px;
 					font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+					@include respond-min($r_desktop) {
+						font-size: 17px;
+					}
 				}
 
 				@include respond-min($r_desktop) {
 					margin-top: 20px;
-					font-size: 20px;
+					font-size: 19px;
 				}
 			}
 
-			&:hover {
-				.icon {
-					background-image: url('#{$img}feature-icon-outline-hover.png');
-					.icon-inner {
-						@include vp(transform, scale(1.1, 1.1))
-					}
-				}
-			}
+			// &:hover {
+			// 	.icon {
+			// 		background-image: url('#{$img}feature-icon-outline-hover.png');
+			// 		.icon-inner {
+			// 			@include vp(transform, scale(1.1, 1.1))
+			// 		}
+			// 	}
+			// }
 
 			&--one {
 				.icon {

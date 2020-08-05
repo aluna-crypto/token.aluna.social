@@ -8,6 +8,7 @@
 	// }
 	@include respond-min($r_desktop) {
 		position: relative;
+		padding-bottom: 230px;
 	}
 
 	h2.row-title {
@@ -74,6 +75,7 @@
 				background-image: none;
 				padding-left: 0;
 				margin-bottom: 38px;
+				text-transform: none;
 			}
 		}
 	}
@@ -86,7 +88,8 @@
 			margin-left: 28px;
 		}
 		@include respond-min($r_desktop) {
-			margin-top: -30px;
+			// margin-top: -30px;
+			margin-top: 0px;
 		//     // position: absolute;
 		//     left: 50%;
 		//     margin-left: 57px;

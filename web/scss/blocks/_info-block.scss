@@ -7,6 +7,7 @@
 	padding-bottom: 50px;
 	@include respond-min($r_desktop) {
 		// padding-bottom: 50px;
+		padding-bottom: 120px;
 	}
 
 	// // margin-bottom: 50px;
@@ -22,7 +23,7 @@
 		text-align: center;
 
 		@include respond-min($r_desktop) {
-			margin-top: 100px;
+			margin-top: 140px;
 			font-size: 50px;
 			font-weight: 100;
 			letter-spacing: 7px;
@@ -38,9 +39,26 @@
 		margin-top: 50px;
 		margin-bottom: 50px;
 
+		br {
+			display: none;
+		}
+
 		.color-gold {
 			color: $color_gold;
 			text-decoration: underline;
+		}
+
+		&.sup-present {
+			// line-height: 10px;
+			left: 50%;
+			@include respond-min($r_desktop) {
+				line-height: 32px;
+				width: 390px;
+				text-align: center;
+			    margin-top: 25px;
+			    margin-left: 40px;
+			}
+
 		}
 
 		@include respond-min($r_tablet) {
@@ -49,14 +67,18 @@
 			width: 400px;
 		}
 		@include respond-min($r_desktop) {
-			margin-left: 105px;
-			margin-top: -8px;
-			font-size: 20px;
-			width: 480px;
-			margin-bottom: 90px;
-			line-height: 38px;
-			letter-spacing: 0.7px;
-			vertical-align: top;
+		    margin-left: 105px;
+		    margin-top: -11px;
+		    font-size: 21px;
+		    width: 493px;
+		    margin-bottom: 90px;
+		    line-height: 36px;
+		    /* letter-spacing: 0.7px; */
+		    vertical-align: top;
+
+		    br {
+		    	display: inline;
+		    }
 		}
 
 	}
@@ -67,8 +89,9 @@
 		@include respond-min($r_tablet) {
 			display: inline-block;
 			vertical-align: middle;
-			float: right;
+			float: left;
 			margin-top: 15px;
+			margin-right: 50px;
 			width: 150px;
 			height: 150px;
 
@@ -78,10 +101,85 @@
 		}
 		@include respond-min($r_desktop) {
 			vertical-align: top;
-			margin-top: -25px;
+			margin-top: 18px;
 			width: 155px;
 			height: 155px;
-			margin-right: 130px;
+			margin-left: 114px;
+			// margin-right: 130px;
+			margin-right: 0;
+		}
+	}
+
+	.countdown-orbit {
+		// background-color: red;
+		width: 155px;
+		height: 155px;
+		// margin-right: 114px;
+		// margin-top: 18px;
+		margin-left: calc(50% - 77px);
+		position: relative;
+
+		@include respond-min($r_desktop) {
+			float: right;
+			margin-right: 114px;
+			margin-top: 18px;
+			margin-left: 0;
+		}
+
+		.background {
+			background-image: url('#{$img}token-orbit.png');
+			background-size: 139% 139%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		} 
+		.days {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include vp(transform, translate(-50%, -50%));
+			z-index: 2;
+
+			.number {
+				color: #FAFF00;
+				font-size: 40px;
+				font-family: 'Maison Neue Mono',  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				text-align: center;
+				margin-top: 24px;
+			}
+			.label {
+				color: #fff;
+				font-size: 16px;
+				text-transform: uppercase;
+				text-align: center;
+				letter-spacing: 3px;
+			}
+		}
+		.rotate {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 3;
+
+			@include vp(animation, rotating 60s linear infinite);
+			.circle {
+				width: 20px;
+				height: 20px;
+				background-color: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: calc(50% - 10px);
+				left: -8px;
+			}
 		}
 	}
 
@@ -94,18 +192,24 @@
 		text-align: center;
 		padding: 20px;
 		line-height: 28px;
+		margin-top: 60px;
 		
 		@include respond-min($r_tablet) {
+			border: none;
+			background-image: url('#{$img}outline-box.png');
+			background-size: 100% 100%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
 			margin-top: 50px;
 		}
 		@include respond-min($r_desktop) {
-			margin-top: -20px;
+			margin-top: -23px;
 			margin-left: 100px;
 			margin-right: 100px;
 			font-size: 22px;
 			padding-top: 32px;
 			padding-bottom: 32px;
-			line-height: 38px;
+			line-height: 39px;
 		}
 	}
 
@@ -118,10 +222,39 @@
 		}
 		@include respond-min($r_desktop) {
 			margin: 0 auto;
-			margin-top: 38px;
+			margin-top: 130px;
 			display: block;
 			width: 230px;
 		}
 	}
 
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

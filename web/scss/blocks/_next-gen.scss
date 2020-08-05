@@ -36,16 +36,52 @@
 	.video-box {
 		padding-top: 1px;
 		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+
+
 
 		@include respond-min($r_desktop) {
 			margin-top: 28px;
 			width: 640px;
 			display: inline-block;
 			vertical-align: top;
+			padding-bottom: 36.3%;
 		}
+
+		iframe {
+			// width: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    // opacity: 0.5;
+		    z-index: 0;
+			@include respond-min($r_desktop) {
+				margin-top: 24px;
+			}
+
+		}
+
 
 		img {
 			width: 100%;	
+			height: 165px;
+			object-fit: cover;
+			position: relative;
+			z-index: 2;
+			// opacity: 0.5;
+
+			@include respond-min($r_tablet) {
+				height: 338px;
+			}
+			@include respond-min($r_desktop) {
+				margin-top: 19px;
+				height: 371px;
+				margin-left: -2px;
+				width: calc(100% + 2px);
+			}
 		}
 		.play {
 			background-image: url('#{$img}play-btn.png');
@@ -68,7 +104,7 @@
 				width: 106px;
 				height: 106px;
 				margin-left: -53px;
-				margin-top: -53px;
+				margin-top: -30px;
 			}
 
 
@@ -101,16 +137,16 @@
 	}
 
 	.learn-more {
-		margin-left: 19px;
-		margin-top: 40px;
+		margin-left: -10px;
+		margin-top: 74px;
 		@include respond-min($r_tablet) {
 			margin-left: 29px;
 		}
 		@include respond-min($r_desktop) {
 			position: absolute;
 			left: 50%;
-			margin-left: 313px;
-			top: 507px;
+			margin-left: 310px;
+			top: 496px;
 			// display: inline-block;
 			// float: right;
 			// vertical-align: top;

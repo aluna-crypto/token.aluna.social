@@ -1,12 +1,20 @@
 #wp-four {
 	// background-color: red;
+		// background-image: url('#{$img}anim-2/_debug-10.png');
+		background-position: 50% 0;
+		background-repeat: no-repeat;
 	position: relative;
 
-	@include vp(transform, scale(0.45, 0.45));
+	@include vp(transform, scale(0.40, 0.40));
 	@include vp(transform-origin, 0 0 );
 
 	@include respond-min($r_tablet) {
-		@include vp(transform, none);		
+		// @include vp(transform, scale(0.85, 0.85));	
+		@include vp(transform, scale(0.85, 0.85) translate(42px, 0));		
+	}
+	@include respond-min($r_desktop) {
+		@include vp(transform, translate(60px, 0));	
+		margin-top: 56px;
 	}
 
 
@@ -15,10 +23,10 @@
 		background-size: 100% auto;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;		
-		width: 319px;
+		width: 340px;
 		height: 330px;
-		left: 85px;
-		top: 22px;
+		left: 66px;
+		top: 60px;
 		position: absolute;
 		@include vp(transform, scale(0.001, 0.001));
 	}
@@ -28,82 +36,156 @@
 		background-size: 100% auto;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;		
-		width: 115px;
-		left: 185px;
-		top: 172px;
-		height: 50px;
+		width: 122px;
+		left: 174px;
+		top: 212px;
+		height: 36px;
 		position: absolute;
 		@include vp(transform, scale(0.001, 0.001));
 		// background-color: rgba(0,0,255,0.5);
 	}
 
-	.tl {
-		background-image: url('#{$img}anim-2/tl.png');
+	
+	.text-1,
+	.text-2,
+	.text-3,
+	.text-4,
+	.text-5,
+	.text-6,
+	.text-7,
+	.text-8 {
 		background-size: 100% auto;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;		
-		width: 172px;
-		left: 1px;
-		top: -1px;
-		height: 89px;
 		position: absolute;
 		opacity: 0;
-		// background-color: rgba(0,0,255,0.5);
 	}
 
-	.tr {
-		background-image: url('#{$img}anim-2/tr.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;		
-		width: 287px;
-		left: 331px;
-		top: -1px;
-		height: 61px;
-		position: absolute;
-		opacity: 0;
-		// background-color: rgba(0,0,255,0.5);
+	.text-1 {
+		background-image: url('#{$img}anim-2/text-1.png');
+	    width: 194px;
+	    left: -64px;
+	    top: 304px;
+	    height: 50px;
+	}
+	.text-2 {
+		background-image: url('#{$img}anim-2/text-2.png');
+	    width: 237px;
+	    left: -64px;
+	    top: 0px;
+	    height: 105px;
+	}
+	.text-3 {
+		background-image: url('#{$img}anim-2/text-3.png');
+	    width: 333px;
+	    left: 309px;
+	    top: 0px;
+	    height: 73px;
 	}
 
-	.right {
-		background-image: url('#{$img}anim-2/right.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;		
-	    width: 282px;
-	    left: 327px;
-	    top: 89px;
-	    height: 132px;
-	    position: absolute;
-	    opacity: 0;
-		// background-color: rgba(0,0,255,0.5);
+	.text-4 {
+		background-image: url('#{$img}anim-2/text-4.png');
+	    width: 295px;
+	    left: 247px;
+	    top: 71px;
+	    height: 19px;
 	}
-	.br {
-		background-image: url('#{$img}anim-2/br.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;		
-	    width: 240px;
-	    left: 307px;
-	    top: 284px;
-	    height: 98px;
-	    position: absolute;
-	    opacity: 0;
-		// background-color: rgba(0,0,255,0.5);
+	.text-5 {
+		background-image: url('#{$img}anim-2/text-5.png');
+	    width: 389px;
+	    left: 284px;
+	    top: 97px;
+	    height: 19px;
 	}
-	.bl {
-		background-image: url('#{$img}anim-2/bl.png');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;		
-	    width: 170px;
-	    left: 1px;
-	    top: 284px;
-	    height: 95px;
-	    position: absolute;
-	    opacity: 0;
-		// background-color: rgba(0,0,255,0.5);
+	.text-6 {
+		background-image: url('#{$img}anim-2/text-6.png');
+	    width: 286px;
+	    left: 317px;
+	    top: 123px;
+	    height: 19px;
 	}
+	.text-7 {
+		background-image: url('#{$img}anim-2/text-7.png');
+	    width: 222px;
+	    left: 352px;
+	    top: 229px;
+	    height: 19px;
+	}
+	.text-8 {
+		background-image: url('#{$img}anim-2/text-8.png');
+	    width: 386px;
+	    left: 252px;
+	    top: 340px;
+	    height: 19px;
+	}
+
+	// .tl {
+	// 	background-image: url('#{$img}anim-2/tl.png');
+	// 	background-size: 100% auto;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;		
+	// 	width: 172px;
+	// 	left: 1px;
+	// 	top: -1px;
+	// 	height: 89px;
+	// 	position: absolute;
+	// 	opacity: 0;
+	// 	// background-color: rgba(0,0,255,0.5);
+	// }
+
+	// .tr {
+	// 	background-image: url('#{$img}anim-2/tr.png');
+	// 	background-size: 100% auto;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;		
+	// 	width: 287px;
+	// 	left: 331px;
+	// 	top: -1px;
+	// 	height: 61px;
+	// 	position: absolute;
+	// 	opacity: 0;
+	// 	// background-color: rgba(0,0,255,0.5);
+	// }
+
+	// .right {
+	// 	background-image: url('#{$img}anim-2/right.png');
+	// 	background-size: 100% auto;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;		
+	//     width: 282px;
+	//     left: 327px;
+	//     top: 89px;
+	//     height: 132px;
+	//     position: absolute;
+	//     opacity: 0;
+	// 	// background-color: rgba(0,0,255,0.5);
+	// }
+	// .br {
+	// 	background-image: url('#{$img}anim-2/br.png');
+	// 	background-size: 100% auto;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;		
+	//     width: 240px;
+	//     left: 307px;
+	//     top: 284px;
+	//     height: 98px;
+	//     position: absolute;
+	//     opacity: 0;
+	// 	// background-color: rgba(0,0,255,0.5);
+	// }
+	// .bl {
+	// 	background-image: url('#{$img}anim-2/bl.png');
+	// 	background-size: 100% auto;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;		
+	//     width: 170px;
+	//     left: 1px;
+	//     top: 284px;
+	//     height: 95px;
+	//     position: absolute;
+	//     opacity: 0;
+	// 	// background-color: rgba(0,0,255,0.5);
+	// }
 
 
 	&.triggered {
@@ -113,33 +195,76 @@
 		}
 		.middle {
 			@include vp(transform, scale(1, 1));
-			@include vp(transition, all 0.4s 3s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition, all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 4.5s);
+		}
+		
+		.text-1 {
+			opacity: 1;
+			@include vp(transition, opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 1s);
+		}
+		.text-2 {
+			opacity: 1;
+			@include vp(transition, opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 1.5s);
+		}
+		.text-3 {
+			opacity: 1;
+			@include vp(transition, opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 2s);
 		}
 
-		.tl {
+		.text-4 {
 			opacity: 1;
-			@include vp(transition, opacity 1.2s 1s);
+			@include vp(transition, opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 3s);
+		}
+		.text-5 {
+			opacity: 1;
+			@include vp(transition, opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 3.2s);
+		}
+		.text-6 {
+			opacity: 1;
+			@include vp(transition, opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 3.4s);
+		}
+		.text-7 {
+			opacity: 1;
+			@include vp(transition, opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 3.6s);
+		}
+		.text-8 {
+			opacity: 1;
+			@include vp(transition, opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+			@include vp(transition-delay, 3.8s);
 		}
 
-		.tr {
-			opacity: 1;
-			@include vp(transition, opacity 1.2s 1.2s);
-		}
+		// .tl {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 1.2s 1s);
+		// }
 
-		.bl {
-			opacity: 1;
-			@include vp(transition, opacity 1.2s 1.4s);
-		}
+		// .tr {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 1.2s 1.2s);
+		// }
 
-		.br {
-			opacity: 1;
-			@include vp(transition, opacity 1.2s 1.6s);
-		}
+		// .bl {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 1.2s 1.4s);
+		// }
 
-		.right {
-			opacity: 1;
-			@include vp(transition, opacity 1.2s 2s);
-		}
+		// .br {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 1.2s 1.6s);
+		// }
+
+		// .right {
+		// 	opacity: 1;
+		// 	@include vp(transition, opacity 1.2s 2s);
+		// }
 
 		// .ring-1 {
 		// 	@include vp(transform, scale(1, 1));

@@ -10,12 +10,12 @@
 
 	@include respond-min($r_desktop) {
 		position: relative;
-		padding-bottom: 180px;
+		padding-bottom: 195px;
 	}
 
 
 	&.last {
-		margin-bottom: 70px;
+		margin-bottom: 150px;
 		border-bottom: none;
 	}
 
@@ -46,7 +46,7 @@
 			font-size: 20px;
 
 			@include respond-min($r_desktop) {
-				margin-top: 94px;
+				margin-top: 97px;
 				font-size: 37px;
 			}
 
@@ -62,10 +62,10 @@
 
 			@include respond-min($r_desktop) {
 				// background-color: rgba(0,0,255,0.5);
-				width: 500px;
+				width: 517px;
 				font-size: 24px;
 				margin-top: 43px;
-				line-height: 42px;
+				line-height: 44px;
 			}
 		}
 
@@ -75,9 +75,28 @@
 				// background-color: rgba(255,0,0,0.5);
 				display: inline-block;
 				vertical-align: top;
-				width: 450px;
-				margin-top: 92px;
+				width: 470px;
+				margin-top: 87px;
 				margin-left: 8px;
+			}
+
+			&.less-top {
+				@include respond-min($r_desktop) {
+					margin-top: 50px;
+				}
+
+			}
+			&.more-less-top {
+				@include respond-min($r_desktop) {
+					margin-top: 7px;
+				}
+
+			}
+
+			&.wide {
+				@include respond-min($r_desktop) {
+					width: 520px;
+				}
 			}
 
 			.point {
@@ -86,13 +105,13 @@
 					background-size: 19px auto;
 					background-position: 2px 4px;
 					background-repeat: no-repeat;
-					margin-bottom: 34px;
+					margin-bottom: 24px;
 
 					color: $color_light;
 					font-weight: 100;
-					font-size: 18px;
+					font-size: 21px;
 					padding-left: 40px;
-					line-height: 30px;
+					line-height: 32px;
 				}
 
 			}

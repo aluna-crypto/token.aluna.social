@@ -1,3 +1,20 @@
+#wave {
+	display: none;
+
+	@include respond-min($r_desktop) {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100vh;
+
+		> div {
+			// background-color: red;
+			@include vp(transform, rotate(-10deg) );
+		}
+	}
+}
 .wrapper {
 	// background-color: rgba(255,0,0,0.5);
 
@@ -19,6 +36,7 @@
 			font-size: 38px;
 			letter-spacing: 7px;
 			line-height: 48px;
+			font-weight: 100;
 
 			@include respond-min($r_desktop) {
 				margin-top: 101px;
@@ -57,16 +75,16 @@
 		.row-inner {
 			// background-color: rgba(255,0,0,0.5);
 			// width: 294px;
-			margin-left: calc( (100vw - 294px) / 2);
-			margin-right: calc( (100vw - 294px) / 2);
+			margin-left: calc( (100% - 294px) / 2);
+			margin-right: calc( (100% - 294px) / 2);
 
 			@include respond-min($r_tablet) {
-				margin-left: calc( (100vw - 600px) / 2);
-				margin-right: calc( (100vw - 600px) / 2);
+				margin-left: calc( (100% - 600px) / 2);
+				margin-right: calc( (100% - 600px) / 2);
 			}
 			@include respond-min($r_desktop) {
-				margin-left: calc( (100vw - 998px) / 2);
-				margin-right: calc( (100vw - 998px) / 2);
+				margin-left: calc( (100% - 998px) / 2);
+				margin-right: calc( (100% - 998px) / 2);
 			}
 
 		}

@@ -2,14 +2,15 @@
 	// background: $background;
 	// background-color: rgba(0,255,0,0.5);
 	// height: 755px;
-	height: 2480px;
+	// height: 2480px;
+	margin-bottom: 80px;
 	overflow: hidden;
 
 	// @include respond-min($r_tablet) {
 	// 	height: 600px;
 	// }
 	@include respond-min($r_desktop) {
-		height: 1950px;
+		// height: 1950px;
 	// 	// height: 736px;
 	// 	// position: relative;
 	}
@@ -18,7 +19,7 @@
 	h2.row-title {
 		margin-top: 88px;
 		@include respond-min($r_desktop) {
-			margin-top: 120px;
+			margin-top: 71px;
 		}
 
 	}
@@ -70,6 +71,14 @@
 				padding-bottom: 40px;
 				margin-bottom: -20px;
 
+				&--highlight {
+					.marker {
+						@include respond-min($r_desktop) {
+							background-image: url('#{$img}roadmap-item-highlight.png') !important;
+						}
+					}
+				}
+
 				.marker {
 					background-image: url('#{$img}roadmap-item-mobile.png');
 					background-size: 100% auto;
@@ -81,7 +90,7 @@
 					left: 2px;
 					top: 5px;
 					z-index: 10;
-					opacity: 0;
+					// opacity: 0;
 
 					@include respond-min($r_desktop) {
 						background-image: url('#{$img}roadmap-item.png');
@@ -102,7 +111,7 @@
 					top: 30px;
 					position: absolute;
 					z-index: 5;
-					opacity: 0;
+					// opacity: 0;
 
 					@include respond-min($r_desktop) {
 						// background-color: $color_light;
@@ -113,9 +122,10 @@
 					&--rainbow {
 						background-color: transparent;
 						background-image: url('#{$img}chain-rainbow.png');
-						background-size: auto 100%;
+						background-size: 100% 368px;
 						background-position: 50% 0;
 						background-repeat: no-repeat;
+						max-height: 0;
 
 					}
 				}
@@ -126,7 +136,7 @@
 				    font-family: 'Maison Neue Mono', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 				    margin-top: 24px;
 				    font-size: 22px;
-				    opacity: 0;
+				    // opacity: 0;
 
 					@include respond-min($r_desktop) {
 						// background-color: rgba(0,255,0,0.5);
@@ -144,19 +154,31 @@
 					margin-top: 20px;
 
 					@include respond-min($r_desktop) {
-						margin-left: 295px;
+						margin-left: 285px;
 						margin-top: 22px;
 
 						// background-color: rgba(0,255,0,0.5);
-						width: 330px;
+						width: 335px;
 						display: inline-block;
 						vertical-align: top;
+					}
+
+					&--one {
+						@include respond-min($r_desktop) {
+							width: 351px;
+						}
+
 					}
 
 					&--two {
 						@include respond-min($r_desktop) {
 							margin-left: 16px;
+							// margin-left: 0;
 						}
+					}
+
+					&--wide {
+						width: 100%;
 					}
 
 
@@ -220,19 +242,23 @@
 					}
 				}
 
+				&--last {
+					min-height: 450px;
+				}
+
 				&.triggered {
-					.marker {
-						opacity: 1;
-						@include vp(transition, opacity 0.5s);
-					}
+				// 	.marker {
+				// 		opacity: 1;
+				// 		@include vp(transition, opacity 0.5s);
+				// 	}
 					.inner-line{
-						opacity: 1;
-						@include vp(transition, opacity 0.5s);
+						max-height: 500px;
+						@include vp(transition, max-height 4s);
 					}
-					.date{
-						opacity: 1;
-						@include vp(transition, opacity 0.5s);
-					}
+				// 	.date{
+				// 		opacity: 1;
+				// 		@include vp(transition, opacity 0.5s);
+				// 	}
 				}
 			}
 		}
