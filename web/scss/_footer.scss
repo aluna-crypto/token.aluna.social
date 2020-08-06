@@ -129,6 +129,9 @@
 			&--mail {
 				background-image: url('#{$img}social-dark-mail.png');
 			}
+			&--holdex {
+				background-image: url('#{$img}social-dark-holdex.png');
+			}
 
 			&:hover {
 				@include vp(transform, scale(1.2, 1.2));
